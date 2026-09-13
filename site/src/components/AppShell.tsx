@@ -40,9 +40,9 @@ export function AppShell({ active, themeToggle, children }: Props) {
         <SidebarHeader>
           <a
             href="/"
-            className="text-ink-strong px-2 py-1.5 font-serif text-lg font-semibold"
+            className="text-ink-strong px-2 py-1.5 font-serif text-xl font-semibold"
           >
-            Market Wiki
+            Market LLM Wiki
           </a>
         </SidebarHeader>
         <SidebarContent>
@@ -51,7 +51,11 @@ export function AppShell({ active, themeToggle, children }: Props) {
               <SidebarMenu>
                 {links.map(({ href, label, icon: Icon }) => (
                   <SidebarMenuItem key={href}>
-                    <SidebarMenuButton asChild isActive={href === active}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={href === active}
+                      className="h-10 gap-3 text-base [&_svg]:size-5"
+                    >
                       <a
                         href={href}
                         aria-current={href === active ? "page" : undefined}
