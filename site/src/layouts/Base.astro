@@ -4,6 +4,7 @@ interface Props {
   description?: string;
 }
 
+import { Icon } from "astro-icon/components";
 import { activeNav } from "../lib/nav";
 import "../styles/global.css";
 
@@ -92,8 +93,14 @@ const links = [
           type="button"
         >
           <span class="sr-only">Theme:</span>
-          <span data-theme-label="light">Light</span>
-          <span data-theme-label="dark">Dark</span>
+          <span data-theme-label="light">
+            <span class="sr-only">Light</span>
+            <Icon name="ri:sun-line" class="size-5" aria-hidden="true" />
+          </span>
+          <span data-theme-label="dark">
+            <span class="sr-only">Dark</span>
+            <Icon name="ri:moon-line" class="size-5" aria-hidden="true" />
+          </span>
         </button>
       </nav>
       <slot />

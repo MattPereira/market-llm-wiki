@@ -2,9 +2,11 @@
 import { defineConfig } from "astro/config";
 import { satteri } from "@astrojs/markdown-satteri";
 import tailwindcss from "@tailwindcss/vite";
+import icon from "astro-icon";
 import { stripAuthoredHeader } from "./src/lib/strip-authored-header.ts";
 
 export default defineConfig({
+  integrations: [icon()],
   markdown: {
     // defaultColor:false emits both themes as custom properties rather than
     // baking one in, so global.css can pick between them with light-dark().

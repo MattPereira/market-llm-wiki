@@ -118,7 +118,7 @@
 
 :root[data-theme="light"] [data-theme-label="light"],
 :root[data-theme="dark"] [data-theme-label="dark"] {
-  display: inline;
+  display: block;
 }
 
 /* Pagefind ships its own stylesheet, so it only follows the site through these. */
