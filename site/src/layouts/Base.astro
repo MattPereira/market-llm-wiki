@@ -12,15 +12,15 @@ const { title, description } = Astro.props;
 const active = activeNav(Astro.url.pathname);
 
 const links = [
-  { href: "/", label: "Summaries" },
-  { href: "/creators/", label: "Creators" },
+  { href: "/", label: "Creators" },
+  { href: "/summaries/", label: "Summaries" },
   { href: "/topics/", label: "Topics" },
   { href: "/search/", label: "Search" },
 ];
 ---
 
 <!doctype html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,9 +51,15 @@ const links = [
         } catch {
           // Storage can throw when cookies are blocked; system default is fine.
         }
-        const theme = stored === "light" || stored === "dark" ? stored : "system";
+        // No stored choice seeds from the OS, but the toggle only offers light/dark.
+        const theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
         document.documentElement.dataset.theme = theme;
-        if (theme !== "system") document.documentElement.style.colorScheme = theme;
+        document.documentElement.style.colorScheme = theme;
       })();
     </script>
     <slot name="head" />
@@ -86,7 +92,6 @@ const links = [
           type="button"
         >
           <span class="sr-only">Theme:</span>
-          <span data-theme-label="system">Auto</span>
           <span data-theme-label="light">Light</span>
           <span data-theme-label="dark">Dark</span>
         </button>
@@ -96,15 +101,13 @@ const links = [
     <script is:inline>
       document.getElementById("theme-toggle").addEventListener("click", () => {
         const root = document.documentElement;
-        const order = ["system", "light", "dark"];
-        const next = order[(order.indexOf(root.dataset.theme) + 1) % order.length];
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
 
         root.dataset.theme = next;
-        root.style.colorScheme = next === "system" ? "" : next;
+        root.style.colorScheme = next;
 
         try {
-          if (next === "system") localStorage.removeItem("theme");
-          else localStorage.setItem("theme", next);
+          localStorage.setItem("theme", next);
         } catch {
           // Preference just won't survive the reload.
         }

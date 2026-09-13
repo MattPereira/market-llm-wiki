@@ -22,7 +22,7 @@ export const creatorSlugs = (): string[] => [...creators.keys()];
  * of the site's own pages would be shadowed by it and the Creator page would just
  * vanish with no build error. Cheaper to refuse the slug than to debug the gap.
  */
-export const RESERVED_SLUGS = ["creators", "topics", "search"];
+export const RESERVED_SLUGS = ["summaries", "topics", "search"];
 
 export function assertRoutableCreators(slugs: readonly string[] = creatorSlugs()) {
   for (const slug of slugs) {

@@ -1,17 +1,27 @@
 ---
 import { getCollection } from "astro:content";
-import SummaryList from "../components/SummaryList.astro";
+import BrowseList from "../components/BrowseList.astro";
 import Base from "../layouts/Base.astro";
-import { newestFirst } from "../lib/summaries";
+import { creatorName } from "../lib/creators";
+import { formatDate, summaryCount } from "../lib/format";
+import { byCreator } from "../lib/summaries";
 
-const summaries = newestFirst(await getCollection("summaries"));
+// Driven by the Summaries on disk, not by creators.toml — deliberately unlike
+// /topics, which lists its whole vocabulary. creators.toml also carries Creators
+// that are only configured for ingest, and a reader clicking one would land on a
+// page with nothing on it and no way to tell whether that is a bug.
+const grouped = byCreator(await getCollection("summaries"));
+
+const items = [...grouped]
+  .map(([slug, summaries]) => ({
+    href: `/${slug}/`,
+    name: creatorName(slug),
+    note: `${summaryCount(summaries.length)} · latest ${formatDate(summaries[0]!.data.upload_date)}`,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<Base
-  title="Market Wiki"
-  description="Summaries of the things worth reading, written by an agent."
->
-  <h1 class="sr-only">Market Wiki</h1>
-
-  <SummaryList summaries={summaries} />
+<Base title="Market Wiki" description="Everyone the wiki covers.">
+  <h1 class="sr-only">Creators</h1>
+  <BrowseList items={items} />
 </Base>

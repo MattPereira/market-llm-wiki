@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import SummaryList from "../components/SummaryList.astro";
+import Base from "../layouts/Base.astro";
+import { newestFirst } from "../lib/summaries";
+
+const summaries = newestFirst(await getCollection("summaries"));
+---
+
+<Base
+  title="Summaries — Market Wiki"
+  description="Summaries of the things worth reading, written by an agent."
+>
+  <h1 class="sr-only">Summaries</h1>
+
+  <SummaryList summaries={summaries} />
+</Base>

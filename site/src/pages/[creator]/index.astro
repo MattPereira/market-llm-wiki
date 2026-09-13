@@ -4,7 +4,6 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import SummaryList from "../../components/SummaryList.astro";
 import Base from "../../layouts/Base.astro";
 import { assertRoutableCreators, creatorName } from "../../lib/creators";
-import { summaryCount } from "../../lib/format";
 import { byCreator } from "../../lib/summaries";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -33,9 +32,6 @@ const name = creatorName(Astro.params.creator!);
     >
       {name}
     </h1>
-    <p class="text-ink mt-2">
-      {summaryCount(summaries.length)}, newest first.
-    </p>
   </header>
 
   <SummaryList summaries={summaries} showCreator={false} />

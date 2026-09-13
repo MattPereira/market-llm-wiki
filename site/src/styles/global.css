@@ -110,13 +110,12 @@
   background-color: light-dark(var(--shiki-light-bg), var(--shiki-dark-bg));
 }
 
-/* The toggle cycles system -> light -> dark, and `data-theme` on <html> is set
-   before first paint, so the label never flashes the wrong state. */
+/* The toggle flips light <-> dark, and `data-theme` on <html> is set before
+   first paint, so the label never flashes the wrong state. */
 [data-theme-label] {
   display: none;
 }
 
-:root[data-theme="system"] [data-theme-label="system"],
 :root[data-theme="light"] [data-theme-label="light"],
 :root[data-theme="dark"] [data-theme-label="dark"] {
   display: inline;

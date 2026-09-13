@@ -8,14 +8,14 @@ export function activeNav(pathname: string): string | undefined {
   if (segments.length === 0) return "/";
 
   switch (segments[0]) {
-    case "creators":
-      return "/creators/";
+    case "summaries":
+      return "/summaries/";
     case "topics":
       return "/topics/";
     case "search":
       return "/search/";
     default:
       // /<creator>/ is a Creator; /<creator>/<slug>/ is a Summary, which is a leaf.
-      return segments.length === 1 ? "/creators/" : undefined;
+      return segments.length === 1 ? "/" : undefined;
   }
 }
