@@ -13,3 +13,7 @@
 ## [2026-09-10] ingest | MARKET UPDATE: Hunter Biden Scams Us, $INTC Rips, Commodities Onchain, Anthropic's Skynet Risk
   - Added: [summary](summaries/1000x/2026-09-10-market-update-hunter-biden-scams-us-intc-rips-commodities-onchain-anthropics-sky.md)
   - Notes: Direct reversal of the 09-04 episode: 80K BTC was the bull trigger there, now the failure to break it turns Avi short-term bearish with a sub-70K target and a rotation into memory/AI equities. Reuses the same AI-trade-siphons-crypto risk he flagged as hypothetical last week. Also debunks the viral Coinalyze altcoin-OI-tops-Bitcoin top signal (the bucket included on-chain equities). Internal tension: bullish AI melt-up while noting memory demand is cooling on price.
+
+## [2026-09-11] ingest | Zcash: All-in with my Net Worth.
+  - Added: [summary](summaries/taiki-maeda/2026-09-11-zcash-all-in-with-my-net-worth.md)
+  - Notes: Maeda treats ZEC's $1K breakout as the start of a reflexive store-of-value repricing driven by privacy adoption, institutional access, and BTC diversification. Material shift from July: then he retained cash and said his ZEC allocation was large enough; now he is “max long” and adding as price rises. Core adoption, regulatory, and institutional-flow claims remain unverified within the video.

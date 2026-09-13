@@ -11,4 +11,5 @@
 
 ## Taiki Maeda
 
+- [Zcash: All-in with my Net Worth.](summaries/taiki-maeda/2026-09-11-zcash-all-in-with-my-net-worth.md) — 2026-09-11 · Taiki Maeda — Maeda argues ZEC's four-digit breakout begins a reflexive repricing as privacy adoption, institutional access, and Bitcoin diversification reinforce one another.
 - [Crypto is Bottoming. Why HYPE and ZEC will go PARABOLIC](summaries/taiki-maeda/2026-07-15-crypto-is-bottoming-why-hype-and-zec-will-go-parabolic.md) — 2026-07-15 · Taiki Maeda — Maeda favors gradual bottoming-process accumulation: HYPE/LIT for RWA perps, ZEC for privacy, quantum resistance, and Bitcoin's Saylor overhang.
