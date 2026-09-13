@@ -20,3 +20,7 @@ description: How to ingest new sources of information into the wiki/ directory
   - Added: [summary](summaries/arthur-hayes/2026-09-02-atencion.md)
   - Notes: Added Hayes’s dollar-liquidity thesis; no contradictions found.
 ```
+
+## 4. Restart the Astro dev server
+- In `site/`, run `npx astro dev status`; if running, `npx astro dev stop`
+- Then `npx astro dev --background`

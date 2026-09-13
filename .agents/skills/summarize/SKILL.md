@@ -6,11 +6,33 @@ description: How to summarize and process content from /wiki/raw/
 
 # Process
 
-## 1. Summarize the content of the raw source
+## 1. Abridge the raw source
 
-For youtube videos, ignore pleasantries and banter unrelated to core content. The youtube transcripts are raw and may contain spelling and other types of errors.
+The Summary is an abridgment: the source, shortened, in the source's own shape.
+Draft from the Raw alone; each source gets the shape its own content calls for.
+Follow its order and emphasis; name headings after its sections or topic shifts.
 
-## 2. Save the summary to `wiki/summaries/<creator>/<date>-<title>.md`
+Cut repetition, pleasantries, sponsor reads, and tangents off the core content.
+Transcripts are raw — fix names, tickers, and numbers from context.
+
+Done when a draft body covers the source start to finish.
+
+## 2. Check the draft against the source
+
+Walk the source section by section — by chapter for transcripts that have
+`chapters`. Confirm each claim, call, number, and chain of reasoning appears at the
+weight the source gives it, attributed to whoever made it, and that every sentence
+in the draft traces back to the source. Add what is missing; remove what does not
+trace.
+
+Then check length against the Raw's `word_count` and `type`. Completeness wins over
+brevity: summaries of longer source content should be roughly 1/10th of the source's
+word count; written posts and shorter source content may be greater than 1/10th or even 1/5th.
+Use best judgement to decide how long a summary should be.
+
+Done when every section of the source is accounted for in the draft.
+
+## 3. Save the summary to `wiki/summaries/<creator>/<date>-<title>.md`
 
 Start the file with YAML front matter
 
@@ -30,12 +52,14 @@ topics: ["macro", "crypto-markets"]
 `blurb` and `topics` are required on every summary — the reading site's content
 schema rejects a summary missing either.
 
+Open the body with the title as an H1 and a byline:
+`**<Creator>** · <upload_date> · <duration> · [watch](<url>)`. For written posts,
+drop the duration and use `[read](<url>)`. The Site strips both; they let the file
+read standalone in Obsidian.
+
 ### blurb
 
-One sentence, 25 words or fewer, ending in a period. It lets a reader — human or
-agent — decide whether to open the summary without opening it. Say what the source
-delivers, not what it covers: "Maeda favors gradual accumulation into the bottom."
-beats "A video about crypto markets."
+One sentence, 25 words or fewer, ending in a period. Helps an agent decide whether to open the summary when answering user questions about wiki content. Say what the sourcedelivers, not what it covers: "Maeda favors gradual accumulation into the bottom." beats "A video about crypto markets."
 
 ### topics
 
@@ -48,7 +72,7 @@ whether to add one, proposing a slug, display name, and the boundary comment tha
 would go with it. Only edit `topics.toml` after they say yes. A vocabulary that
 grows a Topic per summary is worse than no vocabulary.
 
-## 3. Regenerate `wiki/index.md`
+## 4. Regenerate `wiki/index.md`
 
 ```sh
 cd site && pnpm generate-index
