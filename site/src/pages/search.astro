@@ -5,8 +5,8 @@ import Base from "../layouts/Base.astro";
 {
   /*
    * Pagefind builds its index and ships its own UI as a postbuild step over
-   * dist/, so these assets do not exist under `astro dev` and search only works
-   * against a real build (`npm run build && npm run preview`). They are loaded
+   * dist/, so these assets do not exist under plain `astro dev`. `pnpm dev:search`
+   * copies a one-off index into public/ (stale until rerun). They are loaded
    * inline and only here, which is what keeps the rest of the site zero-JS.
    */
 }
@@ -23,7 +23,7 @@ import Base from "../layouts/Base.astro";
   <script is:inline>
     if (typeof PagefindUI === "undefined") {
       document.getElementById("search").textContent =
-        "No search index here. Pagefind builds one during `npm run build`; try `npm run preview`.";
+        "No search index here. Run `pnpm dev:search` to build one for the dev server.";
     } else {
       new PagefindUI({
         element: "#search",

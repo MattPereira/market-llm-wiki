@@ -4,6 +4,7 @@
   "packageManager": "pnpm@11.10.0",
   "scripts": {
     "dev": "pnpm -F wiki-site dev",
+    "dev:search": "pnpm -F wiki-site dev:search",
     "build": "pnpm -F wiki-site build",
     "preview": "pnpm -F wiki-site preview",
     "check": "pnpm -F wiki-site check",

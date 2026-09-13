@@ -9,6 +9,7 @@ is usually what you want since the content lives up there.
 ```sh
 pnpm install
 pnpm dev     # reads the working tree, so an uncommitted Summary previews
+pnpm dev:search  # same, plus a search index built once up front
 pnpm build   # fails by name and field on a Summary missing frontmatter
 pnpm test    # the pure lib/ seams: vocabulary parsing, grouping, formatting
 pnpm check   # typecheck
@@ -67,8 +68,9 @@ what confines the index to them — and since Raw is never built, a phrase dropp
 from a Summary is not findable.
 
 `/search` is the only page that loads JavaScript, and it loads Pagefind's own
-inline. Under `pnpm dev` there is no index yet, so the page says so; use
-`pnpm build && pnpm preview` to try search.
+inline. Under `pnpm dev` there is no index yet, so the page says so. `pnpm
+dev:search` builds once and writes the index into `public/pagefind/` (gitignored),
+where `astro dev` serves it — it goes stale as Summaries change, so rerun it.
 
 ## Deploying
 
