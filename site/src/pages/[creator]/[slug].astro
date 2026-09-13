@@ -4,10 +4,8 @@ import { getCollection, render, type CollectionEntry } from "astro:content";
 import TopicLinks from "../../components/TopicLinks.astro";
 import Base from "../../layouts/Base.astro";
 import { creatorName } from "../../lib/creators";
-import { formatDate, sourceLabel } from "../../lib/format";
-import { formatDuration, readDurationSeconds } from "../../lib/duration";
+import { formatShortDate } from "../../lib/format";
 import { creatorSlug } from "../../lib/summaries";
-import { dirname, resolve } from "node:path";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const summaries = await getCollection("summaries");
@@ -25,21 +23,12 @@ interface Props {
 const { summary } = Astro.props;
 const { Content } = await render(summary);
 
-// `source` is written relative to the Summary, so resolve it against the Summary.
-const rawPath = resolve(dirname(summary.filePath!), summary.data.source);
-const seconds = readDurationSeconds(rawPath);
-
 const creator = creatorSlug(summary.id);
 const name = creatorName(creator);
 ---
 
 <Base title={summary.data.title} description={summary.data.blurb}>
-  <a
-    class="text-ink-muted hover:text-ink text-base"
-    href="/summaries/">← All summaries</a
-  >
-
-  <article class="mt-8" data-pagefind-body>
+  <article data-pagefind-body>
     <header class="mb-10">
       <h1
         class="font-serif text-3xl leading-tight font-semibold tracking-tight text-balance text-ink-strong"
@@ -50,17 +39,16 @@ const name = creatorName(creator);
         <a class="hover:text-ink" href={`/${creator}/`}>{name}</a>
         <span aria-hidden="true"> · </span>
         <time datetime={summary.data.upload_date.toISOString()}>
-          {formatDate(summary.data.upload_date)}
+          {formatShortDate(summary.data.upload_date)}
         </time>
-        {
-          seconds && (
-            <>
-              <span aria-hidden="true"> · </span>
-              {formatDuration(seconds)}
-            </>
-          )
-        }
+        <span aria-hidden="true"> · </span>
+        <a class="hover:text-ink" href={summary.data.url} rel="noopener"
+          >Source ↗</a
+        >
       </p>
+      <nav class="mt-4" aria-label="Topics" data-pagefind-ignore>
+        <TopicLinks topics={summary.data.topics} />
+      </nav>
     </header>
 
     <div
@@ -68,23 +56,5 @@ const name = creatorName(creator);
     >
       <Content />
     </div>
-
-    <nav class="mt-12" aria-label="Topics" data-pagefind-ignore>
-      <TopicLinks topics={summary.data.topics} />
-    </nav>
-
-    <footer
-      class="mt-8 border-edge border-t pt-6 text-base"
-      data-pagefind-ignore
-    >
-      <a
-        class="text-ink hover:text-ink-strong underline underline-offset-4"
-        href={summary.data.url}
-        rel="noopener">{sourceLabel(summary.data.url)} ↗</a
-      >
-      <p class="text-ink-muted mt-2">
-        Summarized from {name}. This page is a summary, not the original.
-      </p>
-    </footer>
   </article>
 </Base>

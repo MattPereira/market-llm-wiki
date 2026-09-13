@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { formatDate, permalink, sourceLabel, summaryCount } from "./format.js";
+import {
+  formatDate,
+  formatShortDate,
+  permalink,
+  sourceLabel,
+  summaryCount,
+} from "./format.js";
 
 describe("summaryCount", () => {
   it("singularises one", () => {
@@ -15,6 +21,12 @@ describe("summaryCount", () => {
 describe("formatDate", () => {
   it("formats a date-only frontmatter value in UTC, not a day early", () => {
     expect(formatDate(new Date("2026-09-05"))).toBe("September 5, 2026");
+  });
+});
+
+describe("formatShortDate", () => {
+  it("abbreviates the month, in UTC", () => {
+    expect(formatShortDate(new Date("2026-09-05"))).toBe("Sep 5, 2026");
   });
 });
 

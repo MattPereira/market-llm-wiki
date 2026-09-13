@@ -8,6 +8,14 @@ export const formatDate = (date: Date): string =>
     timeZone: "UTC",
   });
 
+export const formatShortDate = (date: Date): string =>
+  date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+
 export const permalink = (id: string): string => `/${id}/`;
 
 export const sourceLabel = (url: string): string =>
