@@ -2,11 +2,12 @@ import { describe, expect, it } from "vitest";
 import { activeNav } from "./nav.js";
 
 describe("activeNav", () => {
-  it("marks Creators on the home page", () => {
-    expect(activeNav("/")).toBe("/");
+  it("marks nothing on the home page, which spans every section", () => {
+    expect(activeNav("/")).toBeUndefined();
   });
 
   it("marks the section for each index", () => {
+    expect(activeNav("/creators/")).toBe("/creators/");
     expect(activeNav("/summaries/")).toBe("/summaries/");
     expect(activeNav("/topics/")).toBe("/topics/");
     expect(activeNav("/search/")).toBe("/search/");
@@ -21,7 +22,7 @@ describe("activeNav", () => {
   });
 
   it("marks Creators on a Creator page", () => {
-    expect(activeNav("/kyla-scanlon/")).toBe("/");
+    expect(activeNav("/kyla-scanlon/")).toBe("/creators/");
   });
 
   it("marks nothing on a Summary, which is a leaf rather than a section", () => {

@@ -3,17 +3,23 @@ import { topicName } from "../lib/topics";
 
 interface Props {
   topics: readonly string[];
+  /** `sm` fits inline in a SummaryList row's meta line. */
+  size?: "md" | "sm";
+  class?: string;
 }
 
-const { topics } = Astro.props;
+const { topics, size = "md", class: className } = Astro.props;
 ---
 
-<ul class="flex flex-wrap gap-2">
+<ul class:list={["flex flex-wrap gap-2", className]}>
   {
     topics.map((topic) => (
       <li>
         <a
-          class="inline-block rounded-full border-edge text-ink hover:border-ink-muted hover:text-ink-strong border px-3 py-1 text-sm"
+          class:list={[
+            "inline-block rounded-full border-edge text-ink hover:border-ink-muted hover:text-ink-strong border",
+            size === "sm" ? "px-2.5 py-0.5 text-sm" : "px-3 py-1 text-sm",
+          ]}
           href={`/topics/${topic}/`}
         >
           {topicName(topic)}

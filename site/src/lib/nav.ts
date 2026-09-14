@@ -5,9 +5,12 @@
  */
 export function activeNav(pathname: string): string | undefined {
   const segments = pathname.split("/").filter(Boolean);
-  if (segments.length === 0) return "/";
+  // Home is an overview of every section, so it belongs to none of them.
+  if (segments.length === 0) return undefined;
 
   switch (segments[0]) {
+    case "creators":
+      return "/creators/";
     case "summaries":
       return "/summaries/";
     case "topics":
@@ -16,6 +19,6 @@ export function activeNav(pathname: string): string | undefined {
       return "/search/";
     default:
       // /<creator>/ is a Creator; /<creator>/<slug>/ is a Summary, which is a leaf.
-      return segments.length === 1 ? "/" : undefined;
+      return segments.length === 1 ? "/creators/" : undefined;
   }
 }

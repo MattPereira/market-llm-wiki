@@ -1,27 +1,106 @@
 ---
 import { getCollection } from "astro:content";
-import BrowseList from "../components/BrowseList.astro";
+import SummaryList from "../components/SummaryList.astro";
 import Base from "../layouts/Base.astro";
 import { creatorName } from "../lib/creators";
-import { formatDate, summaryCount } from "../lib/format";
-import { byCreator } from "../lib/summaries";
+import { formatShortDate, summaryCount } from "../lib/format";
+import { byCreator, newestFirst } from "../lib/summaries";
+import { topicSlugs } from "../lib/topics";
 
-// Driven by the Summaries on disk, not by creators.toml — deliberately unlike
-// /topics, which lists its whole vocabulary. creators.toml also carries Creators
-// that are only configured for ingest, and a reader clicking one would land on a
-// page with nothing on it and no way to tell whether that is a bug.
-const grouped = byCreator(await getCollection("summaries"));
+const RECENT = 3;
+const TAGLINE = "Agent-written summaries of market commentary.";
 
-const items = [...grouped]
-  .map(([slug, summaries]) => ({
+const summaries = await getCollection("summaries");
+const recent = newestFirst(summaries).slice(0, RECENT);
+
+// Most recently active first, unlike /creators/: home leads with what's new.
+const creators = [...byCreator(summaries)]
+  .map(([slug, own]) => ({
     href: `/${slug}/`,
     name: creatorName(slug),
-    note: `${summaryCount(summaries.length)} · latest ${formatDate(summaries[0]!.data.upload_date)}`,
+    count: own.length,
+    latest: own[0]!.data.upload_date,
   }))
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => b.latest.valueOf() - a.latest.valueOf());
+
+const plural = (count: number, noun: string) =>
+  `${count} ${count === 1 ? noun : `${noun}s`}`;
+
+// Topics counts the whole vocabulary, matching what /topics/ lists.
+const stats = [
+  { href: "/summaries/", label: summaryCount(summaries.length) },
+  { href: "/creators/", label: plural(creators.length, "creator") },
+  { href: "/topics/", label: plural(topicSlugs().length, "topic") },
+];
+
+const sectionHeader =
+  "border-edge mb-6 flex items-baseline justify-between gap-4 border-b pb-3";
+const sectionTitle =
+  "font-serif text-3xl font-semibold tracking-tight text-ink-strong";
+const allLink =
+  "text-ink-muted hover:text-ink-strong text-base whitespace-nowrap";
 ---
 
-<Base title="Market LLM Wiki" description="Everyone the wiki covers.">
-  <h1 class="sr-only">Creators</h1>
-  <BrowseList items={items} />
+<Base title="Market LLM Wiki" description={TAGLINE}>
+  <div class="flex flex-col gap-10">
+    <header>
+      <h1
+        class="font-serif text-4xl font-semibold tracking-tight text-ink-strong"
+      >
+        Market LLM Wiki
+      </h1>
+      <p class="mt-2 text-ink-muted text-base">
+        {
+          stats.map((stat, i) => (
+            <>
+              {i > 0 && <span aria-hidden="true"> · </span>}
+              <a
+                class="hover:text-ink-strong hover:underline hover:underline-offset-4"
+                href={stat.href}
+              >
+                {stat.label}
+              </a>
+            </>
+          ))
+        }
+      </p>
+    </header>
+
+    <section aria-labelledby="summaries">
+      <div class={sectionHeader}>
+        <h2 id="summaries" class={sectionTitle}>Summaries</h2>
+        <a class={allLink} href="/summaries/">All summaries →</a>
+      </div>
+      <SummaryList summaries={recent} headingLevel={3} compact />
+    </section>
+
+    <section aria-labelledby="creators">
+      <div class={sectionHeader}>
+        <h2 id="creators" class={sectionTitle}>Creators</h2>
+        <a class={allLink} href="/creators/">All creators →</a>
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {
+          creators.map((creator) => (
+            <li>
+              <a
+                class="group border-edge hover:border-ink-muted block h-full rounded-lg border p-5"
+                href={creator.href}
+              >
+                <h3 class="font-serif text-xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
+                  {creator.name}
+                </h3>
+                <p class="mt-1 text-ink-muted text-base">
+                  {summaryCount(creator.count)} · latest{" "}
+                  <time datetime={creator.latest.toISOString()}>
+                    {formatShortDate(creator.latest)}
+                  </time>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
 </Base>

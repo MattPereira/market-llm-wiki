@@ -21,8 +21,8 @@ import {
 
 // Lives here rather than in Base.astro: icon components can't cross the island boundary as props.
 const links = [
-  { href: "/", label: "Creators", icon: RiUserLine },
   { href: "/summaries/", label: "Summaries", icon: RiFileTextLine },
+  { href: "/creators/", label: "Creators", icon: RiUserLine },
   { href: "/topics/", label: "Topics", icon: RiHashtag },
   { href: "/search/", label: "Search", icon: RiSearchLine },
 ];

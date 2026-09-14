@@ -1,42 +1,91 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { creatorName } from "../lib/creators";
-import { formatDate, permalink } from "../lib/format";
+import { formatDate, formatShortDate, permalink } from "../lib/format";
 import { creatorSlug } from "../lib/summaries";
+import TopicLinks from "./TopicLinks.astro";
 
 interface Props {
   summaries: CollectionEntry<"summaries">[];
   /** Off on a Creator page, where repeating the name on every row is noise. */
   showCreator?: boolean;
+  /** The Topic page being viewed, whose pill would otherwise be on every row. */
+  hideTopic?: string;
+  /** 3 when the list sits under a section heading, as on the home page. */
+  headingLevel?: 2 | 3;
+  /** Denser rows for a preview, as on the home page: clamped text, short date, no topic pills. */
+  compact?: boolean;
 }
 
-const { summaries, showCreator = true } = Astro.props;
+const {
+  summaries,
+  showCreator = true,
+  hideTopic,
+  headingLevel = 2,
+  compact = false,
+} = Astro.props;
+const Heading = `h${headingLevel}` as const;
 ---
 
 <ul class="divide-edge divide-y">
   {
-    summaries.map((summary) => (
-      <li class="py-6 first:pt-0">
-        <a class="group block" href={permalink(summary.id)}>
-          <h2 class="font-serif text-2xl leading-snug font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
-            {summary.data.title}
-          </h2>
-          <p class="mt-1.5 text-ink-muted text-base">
+    summaries.map((summary) => {
+      const topics = summary.data.topics.filter((t) => t !== hideTopic);
+
+      // The title link stretches over the whole row so the row stays one click
+      // target; the topic links sit above that overlay, since links can't nest.
+      return (
+        <li class:list={["group relative first:pt-0", compact ? "py-4" : "py-6"]}>
+          <Heading
+            class:list={[
+              "font-serif leading-snug font-semibold text-ink-strong",
+              compact ? "line-clamp-2 text-xl sm:line-clamp-1" : "text-2xl",
+            ]}
+            title={compact ? summary.data.title : undefined}
+          >
+            <a
+              class="after:absolute after:inset-0 group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4"
+              href={permalink(summary.id)}
+            >
+              {summary.data.title}
+            </a>
+          </Heading>
+          <div
+            class:list={[
+              "flex flex-wrap items-center gap-x-2 gap-y-1.5 text-ink-muted",
+              compact ? "mt-1 text-sm" : "mt-1.5 text-base",
+            ]}
+          >
             {showCreator && (
               <>
-                {creatorName(creatorSlug(summary.id))}
-                <span aria-hidden="true"> · </span>
+                <span>{creatorName(creatorSlug(summary.id))}</span>
+                <span aria-hidden="true">·</span>
               </>
             )}
             <time datetime={summary.data.upload_date.toISOString()}>
-              {formatDate(summary.data.upload_date)}
+              {compact
+                ? formatShortDate(summary.data.upload_date)
+                : formatDate(summary.data.upload_date)}
             </time>
-          </p>
-          <p class="mt-2.5 max-w-[70ch] text-ink leading-relaxed">
+            {!compact && topics.length > 0 && (
+              <>
+                <span aria-hidden="true">·</span>
+                <TopicLinks topics={topics} size="sm" class="relative z-10" />
+              </>
+            )}
+          </div>
+          <p
+            class:list={[
+              "max-w-[70ch] text-ink",
+              compact
+                ? "mt-1.5 line-clamp-2 text-base leading-normal"
+                : "mt-2.5 leading-relaxed",
+            ]}
+          >
             {summary.data.blurb}
           </p>
-        </a>
-      </li>
-    ))
+        </li>
+      );
+    })
   }
 </ul>
