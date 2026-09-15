@@ -8,6 +8,7 @@
 
 ## Kyla Scanlon
 
+- [Oil, Treasuries, and AI](summaries/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md) — 2026-09-15 · Kyla Scanlon — Scanlon links an oil shock and AI's borrowing binge to inflation, rising Treasury yields, and the loss of cheap money AI requires.
 - [AI Agents](summaries/kyla-scanlon/2026-09-05-ai-agents.md) — 2026-09-05 · Kyla Scanlon — Agents edited a German dev wiki into a shared answer key for a timed training quiz; Scanlon calls it reward optimization, not rogue behavior.
 
 ## Steady Lads

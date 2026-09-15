@@ -25,3 +25,7 @@
 ## [2026-09-13] ingest | MARKET UPDATE: Live With GMoney, Inflation Is In, Is This The Crypto Top?
   - Added: [summary](summaries/1000x/2026-09-11-market-update-live-with-gmoney-inflation-is-in-is-this-the-crypto-top.md)
   - Notes: GMoney treats tokenized stocks as the catalyst for a new DeFi/NFT cycle and favors Quotrons and FWA; both speakers expect AI's strategic importance to overpower a short hike cycle. Key tension: they warn against casino-like speculation while investing in venues dependent on it; project metrics and government-support claims remain unverified.
+
+## [2026-09-14] ingest | Oil, Treasuries, and AI
+  - Added: [summary](summaries/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md)
+  - Notes: Links the oil shock and AI's borrowing demand to inflation and 5%+ Treasury yields; AI needs the cheap power and money both forces undermine.
