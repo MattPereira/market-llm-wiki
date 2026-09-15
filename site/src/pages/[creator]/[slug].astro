@@ -42,8 +42,11 @@ const name = creatorName(creator);
           {formatShortDate(summary.data.upload_date)}
         </time>
         <span aria-hidden="true"> · </span>
-        <a class="hover:text-ink" href={summary.data.url} rel="noopener"
-          >Source ↗</a
+        <a
+          class="text-external underline underline-offset-2 hover:decoration-2"
+          href={summary.data.url}
+          target="_blank"
+          rel="noopener noreferrer">Source</a
         >
       </p>
       <nav class="mt-4" aria-label="Topics" data-pagefind-ignore>

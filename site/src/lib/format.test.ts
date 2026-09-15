@@ -25,8 +25,8 @@ describe("formatDate", () => {
 });
 
 describe("formatShortDate", () => {
-  it("abbreviates the month, in UTC", () => {
-    expect(formatShortDate(new Date("2026-09-05"))).toBe("Sep 5, 2026");
+  it("uses zero-padded MM/DD/YY, in UTC", () => {
+    expect(formatShortDate(new Date("2026-09-05"))).toBe("09/05/26");
   });
 });
 

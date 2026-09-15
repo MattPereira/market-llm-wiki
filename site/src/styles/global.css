@@ -56,6 +56,7 @@
   --color-ink-muted: var(--ink-muted);
   --color-edge: var(--edge);
   --color-link: var(--link);
+  --color-external: var(--external);
 
   /* shadcn's vocabulary, aliased onto the site palette above. */
   --color-background: var(--surface);
@@ -105,6 +106,8 @@
   --ink-muted: light-dark(var(--color-stone-500), var(--color-stone-400));
   --edge: light-dark(var(--color-stone-200), var(--color-stone-700));
   --link: light-dark(var(--color-amber-700), var(--color-amber-400));
+  /* Classic blue, so a link that leaves the site reads differently from amber in-site links. */
+  --external: light-dark(var(--color-blue-700), var(--color-blue-400));
   --destructive: light-dark(var(--color-red-600), var(--color-red-400));
   --radius: 0.625rem;
   /* A few shadcn classes read the raw variables rather than the color tokens. */

@@ -7,7 +7,7 @@ import { formatShortDate, summaryCount } from "../lib/format";
 import { byCreator, newestFirst } from "../lib/summaries";
 import { topicSlugs } from "../lib/topics";
 
-const RECENT = 3;
+const RECENT = 5;
 const TAGLINE = "Agent-written summaries of market commentary.";
 
 const summaries = await getCollection("summaries");
@@ -33,10 +33,14 @@ const stats = [
   { href: "/topics/", label: plural(topicSlugs().length, "topic") },
 ];
 
-const sectionHeader =
-  "border-edge mb-6 flex items-baseline justify-between gap-4 border-b pb-3";
-const sectionTitle =
-  "font-serif text-3xl font-semibold tracking-tight text-ink-strong";
+const tabs = [
+  { id: "summaries", label: "Summaries" },
+  { id: "creators", label: "Creators" },
+];
+
+// -mb-px lets the selected tab's underline sit on top of the tablist border.
+const tabButton =
+  "-mb-px border-b-2 border-transparent pb-3 font-serif text-2xl font-semibold tracking-tight text-ink-muted hover:text-ink-strong aria-selected:border-ink-strong aria-selected:text-ink-strong";
 const allLink =
   "text-ink-muted hover:text-ink-strong text-base whitespace-nowrap";
 ---
@@ -66,41 +70,118 @@ const allLink =
       </p>
     </header>
 
-    <section aria-labelledby="summaries">
-      <div class={sectionHeader}>
-        <h2 id="summaries" class={sectionTitle}>Summaries</h2>
-        <a class={allLink} href="/summaries/">All summaries →</a>
-      </div>
-      <SummaryList summaries={recent} headingLevel={3} compact />
-    </section>
-
-    <section aria-labelledby="creators">
-      <div class={sectionHeader}>
-        <h2 id="creators" class={sectionTitle}>Creators</h2>
-        <a class={allLink} href="/creators/">All creators →</a>
-      </div>
-      <ul class="grid gap-4 sm:grid-cols-2">
+    <div data-tabs>
+      <div
+        role="tablist"
+        aria-label="Browse"
+        class="border-edge mb-6 flex gap-6 border-b"
+      >
         {
-          creators.map((creator) => (
-            <li>
-              <a
-                class="group border-edge hover:border-ink-muted block h-full rounded-lg border p-5"
-                href={creator.href}
-              >
-                <h3 class="font-serif text-xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
-                  {creator.name}
-                </h3>
-                <p class="mt-1 text-ink-muted text-base">
-                  {summaryCount(creator.count)} · latest{" "}
-                  <time datetime={creator.latest.toISOString()}>
-                    {formatShortDate(creator.latest)}
-                  </time>
-                </p>
-              </a>
-            </li>
+          tabs.map((tab, i) => (
+            <button
+              id={`tab-${tab.id}`}
+              class={tabButton}
+              type="button"
+              role="tab"
+              aria-controls={`panel-${tab.id}`}
+              aria-selected={i === 0 ? "true" : "false"}
+              tabindex={i === 0 ? 0 : -1}
+              data-tab={tab.id}
+            >
+              {tab.label}
+            </button>
           ))
         }
-      </ul>
-    </section>
+      </div>
+
+      <div id="panel-summaries" role="tabpanel" aria-labelledby="tab-summaries">
+        <SummaryList summaries={recent} headingLevel={2} compact />
+        <div class="border-edge border-t pt-4 text-right">
+          <a class={allLink} href="/summaries/">All summaries →</a>
+        </div>
+      </div>
+
+      <div
+        id="panel-creators"
+        role="tabpanel"
+        aria-labelledby="tab-creators"
+        hidden
+      >
+        <ul class="grid gap-4 sm:grid-cols-2">
+          {
+            creators.map((creator) => (
+              <li>
+                <a
+                  class="group border-edge hover:border-ink-muted block h-full rounded-lg border p-5"
+                  href={creator.href}
+                >
+                  <h2 class="font-serif text-xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
+                    {creator.name}
+                  </h2>
+                  <p class="mt-1 text-ink-muted text-base">
+                    {summaryCount(creator.count)} · latest{" "}
+                    <time datetime={creator.latest.toISOString()}>
+                      {formatShortDate(creator.latest)}
+                    </time>
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
   </div>
+  <script is:inline>
+    // Delegated: the page content sits inside the React island, which can swap nodes out on hydration.
+    (() => {
+      const select = (id) => {
+        const root = document.querySelector("[data-tabs]");
+        const tab = root?.querySelector(`[data-tab="${id}"]`);
+        if (!tab) return;
+        for (const other of root.querySelectorAll("[role=tab]")) {
+          const on = other === tab;
+          other.setAttribute("aria-selected", String(on));
+          other.tabIndex = on ? 0 : -1;
+          const panel = document.getElementById(
+            other.getAttribute("aria-controls"),
+          );
+          panel.hidden = !on;
+        }
+      };
+
+      const fromHash = () =>
+        location.hash === "#creators" ? "creators" : "summaries";
+
+      document.addEventListener("click", (event) => {
+        const tab = event.target.closest("[data-tabs] [role=tab]");
+        if (!tab) return;
+        select(tab.dataset.tab);
+        // replaceState so switching tabs doesn't fill the back button history.
+        const hash = tab.dataset.tab === "summaries" ? "" : "#creators";
+        history.replaceState(null, "", location.pathname + hash);
+      });
+
+      const KEYS = ["ArrowLeft", "ArrowRight", "Home", "End"];
+      document.addEventListener("keydown", (event) => {
+        const tab = event.target.closest?.("[data-tabs] [role=tab]");
+        if (!tab || !KEYS.includes(event.key)) return;
+        const all = [...tab.parentElement.querySelectorAll("[role=tab]")];
+        const i = all.indexOf(tab);
+        const step = event.key === "ArrowRight" ? 1 : -1;
+        const next =
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? all.length - 1
+              : (i + step + all.length) % all.length;
+        event.preventDefault();
+        all[next].click();
+        all[next].focus();
+      });
+
+      window.addEventListener("hashchange", () => select(fromHash()));
+      select(fromHash());
+    })();
+  </script>
 </Base>
