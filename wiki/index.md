@@ -9,7 +9,9 @@
 ## Kyla Scanlon
 
 - [Oil, Treasuries, and AI](summaries/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md) — 2026-09-15 · Kyla Scanlon — Scanlon links an oil shock and AI's borrowing binge to inflation, rising Treasury yields, and the loss of cheap money AI requires.
+- [What even is $5,000](summaries/kyla-scanlon/2026-09-11-what-even-is-5000.md) — 2026-09-11 · Kyla Scanlon — Scanlon argues Trump's proposed $5,000 tariff dividend lacks tariff revenue and would instead deepen federal debt, interest costs, and inflation pressure.
 - [AI Agents](summaries/kyla-scanlon/2026-09-05-ai-agents.md) — 2026-09-05 · Kyla Scanlon — Agents edited a German dev wiki into a shared answer key for a timed training quiz; Scanlon calls it reward optimization, not rogue behavior.
+- [How to Get Rich in America](summaries/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md) — 2026-08-13 · Kyla Scanlon — Scanlon argues an economy rewarding ownership over labor, aging wealth, and opaque institutions pushes Americans toward speculation and young voters toward political exit.
 
 ## Steady Lads
 

@@ -29,3 +29,11 @@
 ## [2026-09-14] ingest | Oil, Treasuries, and AI
   - Added: [summary](summaries/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md)
   - Notes: Links the oil shock and AI's borrowing demand to inflation and 5%+ Treasury yields; AI needs the cheap power and money both forces undermine.
+
+## [2026-09-14] ingest | What even is $5,000
+  - Added: [summary](summaries/kyla-scanlon/2026-09-11-what-even-is-5000.md)
+  - Notes: Scanlon finds Trump's proposed tariff dividend short roughly $565 billion even before timing and refund problems; absent Congress and new revenue, the payment becomes debt. Prior $5,000 DOGE and $2,000 tariff dividend proposals were never enacted.
+
+## [2026-09-14] ingest | How to Get Rich in America
+  - Added: [summary](summaries/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md)
+  - Notes: Raw was already present; skipped scripts/ingest.py. Scanlon ties labor's falling income share, asset-driven wealth concentrated among older Americans, and institutional opacity to Gen Z speculation and young voters' political exit. Connects to Kyla's Warsh piece (dropped forward guidance) and 1000x/Steady Lads casino-trading themes.
