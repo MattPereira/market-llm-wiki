@@ -37,3 +37,11 @@
 ## [2026-09-14] ingest | How to Get Rich in America
   - Added: [summary](summaries/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md)
   - Notes: Raw was already present; skipped scripts/ingest.py. Scanlon ties labor's falling income share, asset-driven wealth concentrated among older Americans, and institutional opacity to Gen Z speculation and young voters' political exit. Connects to Kyla's Warsh piece (dropped forward guidance) and 1000x/Steady Lads casino-trading themes.
+
+## [2026-09-16] ingest | MARKET UPDATE: Crypto Is Used To Buy Oil?! FED Meeting, And Economy Ripping
+  - Added: [summary](summaries/1000x/2026-09-16-market-update-crypto-is-used-to-buy-oil-fed-meeting-and-economy-ripping.md)
+  - Notes: Avi reverses his no-hike expectation and treats Fed–Treasury conflict as bullish for monetary assets. Captures stablecoin oil settlement, the hosts' disagreement on Venezuelan oil access and copper exposure, AI competition and crisis theses, GP holdings, and live post-hike BTC levels. Adoption, policy, and project claims retained as speaker accounts.
+
+## [2026-09-16] ingest | Fed day!
+  - Added: [summary](summaries/kyla-scanlon/2026-09-17-fed-day.md)
+  - Notes: Scanlon covers the Fed's first hike since 2023 — oil shock plus AI capital demand driving prices, and the hike partly as credibility repair after Warsh's July no-guidance meeting pushed long yields up. Extends the same oil/Treasuries/AI chain as her 09-15 video; aligns with 1000x's 09-16 hike read from the opposite (monetary-asset-bullish) angle.
