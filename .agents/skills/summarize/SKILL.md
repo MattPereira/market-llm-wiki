@@ -26,8 +26,8 @@ in the draft traces back to the source. Add what is missing; remove what does no
 trace.
 
 Then check length against the Raw's `word_count` and `type`. Completeness wins over
-brevity: summaries of longer source content should be roughly 1/10th of the source's
-word count; written posts and shorter source content may be greater than 1/10th or even 1/5th.
+brevity: summaries of longer source content should be roughly 10-15% of the source length;
+written posts and shorter source content should be 20-40% of the source length.
 Use best judgement to decide how long a summary should be.
 
 Done when every section of the source is accounted for in the draft.
