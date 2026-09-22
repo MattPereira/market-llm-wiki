@@ -5,6 +5,7 @@ import TopicLinks from "../../components/TopicLinks.astro";
 import Base from "../../layouts/Base.astro";
 import { creatorName } from "../../lib/creators";
 import { formatDate } from "../../lib/format";
+import { ogImagePath, ogTitle } from "../../lib/og";
 import { creatorSlug } from "../../lib/summaries";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -29,7 +30,13 @@ const metaLink =
   "underline decoration-edge underline-offset-4 hover:text-ink hover:decoration-ink-muted";
 ---
 
-<Base title={summary.data.title} description={summary.data.blurb}>
+<Base
+  title={summary.data.title}
+  description={summary.data.blurb}
+  ogTitle={ogTitle(summary.data.title, name)}
+  ogImage={ogImagePath(summary.id)}
+  ogType="article"
+>
   <article data-pagefind-body>
     <header class="mb-8">
       <h1

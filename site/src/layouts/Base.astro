@@ -2,14 +2,30 @@
 interface Props {
   title: string;
   description?: string;
+  /** Overrides `title` in share cards, which often show no other text. */
+  ogTitle?: string;
+  /** Site-relative path; pages without one get a text-only card. */
+  ogImage?: string;
+  ogType?: "website" | "article";
 }
 
 import { Icon } from "astro-icon/components";
 import { AppShell } from "@/components/AppShell";
 import { activeNav } from "../lib/nav";
+import { OG_HEIGHT, OG_WIDTH } from "../lib/og";
 import "../styles/global.css";
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  ogTitle = title,
+  ogImage,
+  ogType = "website",
+} = Astro.props;
+
+// Crawlers don't resolve relative URLs, so everything here is absolute.
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = ogImage && new URL(ogImage, Astro.site);
 
 const active = activeNav(Astro.url.pathname);
 ---
@@ -21,6 +37,24 @@ const active = activeNav(Astro.url.pathname);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={ogTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    {
+      ogImageUrl && (
+        <>
+          <meta property="og:image" content={ogImageUrl} />
+          <meta property="og:image:width" content={String(OG_WIDTH)} />
+          <meta property="og:image:height" content={String(OG_HEIGHT)} />
+        </>
+      )
+    }
+    <meta
+      name="twitter:card"
+      content={ogImageUrl ? "summary_large_image" : "summary"}
+    />
     <link rel="icon" href="data:," />
     <link
       rel="preload"

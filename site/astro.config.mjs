@@ -7,7 +7,16 @@ import icon from "astro-icon";
 import { openExternalLinks } from "./src/lib/open-external-links.ts";
 import { stripAuthoredHeader } from "./src/lib/strip-authored-header.ts";
 
+// Share cards need absolute URLs. Previews point at their own deployment so a
+// preview's cards show that preview's images.
+const vercelHost =
+  (process.env.VERCEL_ENV === "production" &&
+    process.env.VERCEL_PROJECT_PRODUCTION_URL) ||
+  process.env.VERCEL_URL;
+const site = vercelHost ? `https://${vercelHost}` : "http://localhost:4321";
+
 export default defineConfig({
+  site,
   integrations: [icon(), react()],
   markdown: {
     // defaultColor:false emits both themes as custom properties rather than
