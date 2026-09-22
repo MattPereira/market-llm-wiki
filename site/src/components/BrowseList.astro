@@ -4,6 +4,7 @@ export interface BrowseItem {
   href: string;
   name: string;
   note: string;
+  meta?: string;
 }
 
 interface Props {
@@ -18,9 +19,16 @@ const { items } = Astro.props;
     items.map((item) => (
       <li class="py-5 first:pt-0">
         <a class="group block" href={item.href}>
-          <h2 class="font-serif text-2xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
-            {item.name}
-          </h2>
+          <div class="flex items-baseline justify-between gap-4">
+            <h2 class="font-serif text-2xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
+              {item.name}
+            </h2>
+            {item.meta && (
+              <span class="shrink-0 text-ink-muted text-sm tabular-nums">
+                {item.meta}
+              </span>
+            )}
+          </div>
           <p class="mt-1 max-w-[70ch] text-ink-muted text-base">{item.note}</p>
         </a>
       </li>

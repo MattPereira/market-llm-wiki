@@ -5,7 +5,7 @@ import SummaryList from "../../components/SummaryList.astro";
 import Base from "../../layouts/Base.astro";
 import { summaryCount } from "../../lib/format";
 import { byTopic } from "../../lib/summaries";
-import { topicName, topicSlugs } from "../../lib/topics";
+import { topicDescription, topicName, topicSlugs } from "../../lib/topics";
 
 // A page per Topic in topics.toml, including the ones nothing carries yet — a
 // linked Topic that 404s would be worse than one that says it is empty.
@@ -24,6 +24,7 @@ interface Props {
 
 const { summaries } = Astro.props;
 const name = topicName(Astro.params.topic!);
+const description = topicDescription(Astro.params.topic!);
 ---
 
 <Base
@@ -37,7 +38,8 @@ const name = topicName(Astro.params.topic!);
     >
       {name}
     </h1>
-    <p class="text-ink mt-2">
+    <p class="text-ink mt-2">{description}</p>
+    <p class="text-ink-muted mt-1 text-base">
       {
         summaries.length === 0
           ? "No summaries carry this topic yet."

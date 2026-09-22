@@ -1,15 +1,34 @@
 import { describe, expect, it } from "vitest";
-import { parseTopics, topicName, topicSlug, topicSlugs } from "./topics.js";
+import {
+  parseTopics,
+  topicDescription,
+  topicName,
+  topicSlug,
+  topicSlugs,
+} from "./topics.js";
 
 describe("parseTopics", () => {
-  it("maps each topic slug to its display name", () => {
-    const topics = parseTopics(`[crypto]\nname = "Crypto"\n`);
+  it("maps each topic slug to its name and description", () => {
+    const topics = parseTopics(
+      `[crypto]\nname = "Crypto"\ndescription = "Token theses."\n`,
+    );
 
-    expect(topics.get("crypto")).toBe("Crypto");
+    expect(topics.get("crypto")).toEqual({
+      name: "Crypto",
+      description: "Token theses.",
+    });
   });
 
   it("rejects a topic without a name", () => {
-    expect(() => parseTopics(`[macro]\n`)).toThrow(/macro/);
+    expect(() => parseTopics(`[macro]\ndescription = "Rates."\n`)).toThrow(
+      /\[macro\] has no "name"/,
+    );
+  });
+
+  it("rejects a topic without a description", () => {
+    expect(() => parseTopics(`[macro]\nname = "Macro"\n`)).toThrow(
+      /\[macro\] has no "description"/,
+    );
   });
 });
 
@@ -20,6 +39,12 @@ describe("topicName", () => {
 
   it("fails loudly for a topic outside the vocabulary", () => {
     expect(() => topicName("defi")).toThrow(/defi/);
+  });
+});
+
+describe("topicDescription", () => {
+  it("reads the real topics.toml", () => {
+    expect(topicDescription("ai")).not.toBe("");
   });
 });
 

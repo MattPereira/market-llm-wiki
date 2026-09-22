@@ -2,18 +2,26 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { parse } from "smol-toml";
 
+export function requiredString(
+  table: unknown,
+  field: string,
+  slug: string,
+  file: string,
+): string {
+  const value = (table as Record<string, unknown> | undefined)?.[field];
+  if (typeof value !== "string" || value === "") {
+    throw new Error(`${file}: [${slug}] has no "${field}"`);
+  }
+  return value;
+}
+
 /** Both vocabulary files are tables-of-tables keyed by slug, each carrying a `name`. */
 export function parseNamedTables(toml: string, file: string): Map<string, string> {
-  const entries = Object.entries(parse(toml));
-
   return new Map(
-    entries.map(([slug, table]) => {
-      const name = (table as { name?: unknown })?.name;
-      if (typeof name !== "string" || name === "") {
-        throw new Error(`${file}: [${slug}] has no "name"`);
-      }
-      return [slug, name];
-    }),
+    Object.entries(parse(toml)).map(([slug, table]) => [
+      slug,
+      requiredString(table, "name", slug, file),
+    ]),
   );
 }
 
@@ -35,8 +43,11 @@ function repoFile(file: string): string {
   }
 }
 
+export const readRepoFile = (file: string): string =>
+  readFileSync(repoFile(file), "utf8");
+
 export function loadNamedTables(file: string): Map<string, string> {
-  return parseNamedTables(readFileSync(repoFile(file), "utf8"), file);
+  return parseNamedTables(readRepoFile(file), file);
 }
 
 export function nameFor(

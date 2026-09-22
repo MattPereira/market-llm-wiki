@@ -1,7 +1,8 @@
 # The controlled Topic vocabulary. A Summary's `topics` frontmatter array may only
 # contain slugs defined here; the Site builds a page per Topic from them.
 #
-# Table key = the Topic slug (also the Site's URL segment). `name` is what readers see.
+# Table key = the Topic slug (also the Site's URL segment). `name` and `description`
+# are what readers see; the comments below each entry are for tagging agents.
 #
 # This list is deliberately small and grows slowly. A vocabulary that gains a Topic
 # per Summary is worse than no vocabulary, because nothing ever collects under a
@@ -14,17 +15,20 @@
 
 [macro]
 name = "Macro"
+description = "Rates, central banks, inflation, and the forces moving every asset at once."
 # Rates, central banks, inflation and employment prints, currencies, sovereign debt.
 # The forces acting on every asset at once. A Summary about what the Fed will do is
 # macro; a Summary about what to buy because of it is also crypto.
 
 [crypto]
 name = "Crypto"
+description = "Cycle calls, token theses, and what to own in crypto."
 # Cycle calls, token theses, sector rotations, positioning in specific crypto assets.
 # The "what to own and why" of crypto.
 
 [equities]
 name = "Equities"
+description = "Stocks, earnings, and sectors: what to own in the stock market."
 # Single stocks, earnings, sectors, indices: the "what to own and why" of the stock
 # market, as crypto is for tokens. Tokenized stocks count when the stock trade itself
 # is discussed. An AI company as a technology story is ai; its stock as a trade is
@@ -32,12 +36,14 @@ name = "Equities"
 
 [commodities]
 name = "Commodities"
+description = "Oil, metals, and energy as markets and trades."
 # Oil, metals, energy, agriculture as physical markets and trades: supply, pricing,
 # who can participate, where a price is heading. Differs from macro: an oil shock
 # driving inflation and a Fed hike is macro; the oil market itself is commodities.
 
 [ai]
 name = "AI"
+description = "Models, agents, and the economics of the AI industry."
 # Models, agents, training dynamics, and the AI industry's economics. Covers both AI
 # as a technology story and AI as a market story; the two are hard to separate and
 # splitting them would leave both halves too thin to browse.

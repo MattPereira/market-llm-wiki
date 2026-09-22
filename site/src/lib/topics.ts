@@ -1,14 +1,37 @@
 import { z } from "astro/zod";
-import { loadNamedTables, nameFor, parseNamedTables } from "./vocabulary.js";
+import { parse } from "smol-toml";
+import { readRepoFile, requiredString } from "./vocabulary.js";
 
 const FILE = "topics.toml";
 
-export const parseTopics = (toml: string): Map<string, string> =>
-  parseNamedTables(toml, FILE);
+interface Topic {
+  name: string;
+  description: string;
+}
 
-const topics = loadNamedTables(FILE);
+export const parseTopics = (toml: string): Map<string, Topic> =>
+  new Map(
+    Object.entries(parse(toml)).map(([slug, table]) => [
+      slug,
+      {
+        name: requiredString(table, "name", slug, FILE),
+        description: requiredString(table, "description", slug, FILE),
+      },
+    ]),
+  );
 
-export const topicName = (slug: string): string => nameFor(topics, slug, FILE);
+const topics = parseTopics(readRepoFile(FILE));
+
+function topicFor(slug: string): Topic {
+  const topic = topics.get(slug);
+  if (topic === undefined) throw new Error(`${FILE} defines no "${slug}"`);
+  return topic;
+}
+
+export const topicName = (slug: string): string => topicFor(slug).name;
+
+export const topicDescription = (slug: string): string =>
+  topicFor(slug).description;
 
 const isTopic = (slug: string): boolean => topics.has(slug);
 

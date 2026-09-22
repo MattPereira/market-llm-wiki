@@ -4,7 +4,7 @@ import BrowseList from "../../components/BrowseList.astro";
 import Base from "../../layouts/Base.astro";
 import { summaryCount } from "../../lib/format";
 import { byTopic } from "../../lib/summaries";
-import { topicName, topicSlugs } from "../../lib/topics";
+import { topicDescription, topicName, topicSlugs } from "../../lib/topics";
 
 // Driven by topics.toml, not by what Summaries happen to carry: a reader should
 // see the whole vocabulary before searching for something the wiki has nothing on.
@@ -15,7 +15,8 @@ const items = topicSlugs().map((slug) => {
   return {
     href: `/topics/${slug}/`,
     name: topicName(slug),
-    note: count === 0 ? "Nothing yet" : summaryCount(count),
+    note: topicDescription(slug),
+    meta: count === 0 ? "Nothing yet" : summaryCount(count),
   };
 });
 ---
