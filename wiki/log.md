@@ -69,3 +69,11 @@
 ## [2026-09-22] ingest | THE HOLE
   - Updated: [summary](summaries/nick-nemeth/2026-04-04-the-hole.md)
   - Notes: Rewrote from the existing Raw under the revised summarize instructions (merged H2s, 15–20% length target; ~1,410 words vs 7,245 source). Merged minor sections (Every Time Anyone Looked into the Brookfield leak, The Fed Knows into How It Starts, Closing into What Happens Next). Kept source's 3.7% vs "5%" captive funding as written.
+
+## [2026-09-22] ingest | Cloudflare CEO: The Internet Needs Crypto to Survive AI
+  - Added: [summary](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md)
+  - Notes: First Bankless entry; guest Matthew Prince. Added to creators.toml without `channel`, so it isn't tracked for new uploads. Captures the argument that answer engines break ad-funded content, the pay-per-crawl/x402 plan, and Prince's 5–50M TPS stablecoin requirement against the ~2M TPS max he has seen. It connects to 1000x's stablecoin-adoption thesis: Prince says demand is there, but no chain yet handles internet-scale volume. Unverified: Prince's crawl-to-referral ratios and the Park Record turnout figures.
+
+## [2026-09-22] ingest | Cloudflare CEO: The Internet Needs Crypto to Survive AI
+  - Updated: [summary](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md)
+  - Notes: Rebuilt from the existing Raw under the updated summarize instructions. Preserves Prince's case for creator control and payment, the 5–50M-per-second capacity problem, and his concerns about access and market concentration. No source fetch.

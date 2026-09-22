@@ -56,3 +56,7 @@ channel = "https://www.youtube.com/channel/UC5K-A8n6phru-uNF6TzH5vQ"
 name = "Nick Nemeth"
 substack = ["mispricedassets"]
 host = "https://mispricedassets.substack.com"
+
+[bankless]
+name = "Bankless"
+youtube = ["bankless"]

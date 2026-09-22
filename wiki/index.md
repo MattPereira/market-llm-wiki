@@ -11,6 +11,10 @@
 
 - [Safety First](summaries/arthur-hayes/2026-09-21-safety-first.md) — 2026-09-21 · Arthur Hayes — Hayes argues that slower AI compute demand will push the US toward subsidized compute or insurance bailouts, adding liquidity that lifts Bitcoin.
 
+## Bankless
+
+- [Cloudflare CEO: The Internet Needs Crypto to Survive AI](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md) — 2026-05-25 · Bankless — Matthew Prince argues AI answers threaten creator revenue and proposes controlled access and stablecoin payments, while warning that scale and concentration remain unsolved.
+
 ## Kyla Scanlon
 
 - [Fed day!](summaries/kyla-scanlon/2026-09-17-fed-day.md) — 2026-09-17 · Kyla Scanlon — Scanlon explains the Fed's first hike since 2023 as an inflation and credibility move it cannot use to fix an oil shock.

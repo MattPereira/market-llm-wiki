@@ -44,11 +44,18 @@ Then check length against the Raw's `word_count`:
 | over 10,000   | 10–15%         |
 
 Always stay between 150 and 1,500 words. The Raw is linked for detail, so when
-the target forces cuts, keep the thesis, predictions, and positions, and cut
-background, anecdotes, and repeated figures first.
+the target forces cuts, keep the thesis, predictions, and positions, and drop
+whole points: background, anecdotes, and repeated figures first. Every point you
+keep carries its full reasoning. Shorten the list of points, not the explanation
+of each.
 
-Done when every major argument, prediction, and position is accounted for and the
-draft is within the length target.
+Last, give the draft a **cold read**, as someone who has never seen the source.
+Every paragraph follows on its own, and every figure names what it measures and
+what it is compared against. Where a passage needs the source to make sense,
+restore the missing step or drop the point.
+
+Done when every major argument, prediction, and position is accounted for, the
+draft is within the length target, and every paragraph passes the cold read.
 
 ## 3. Save the summary to `wiki/summaries/<creator>/<date>-<title>.md`
 
