@@ -71,34 +71,18 @@ const Card = ({ title, byline, blurb }: OgCard) => (
     >
       {title}
     </div>
-    <div style={{ marginTop: 20, fontSize: 30, color: inkMuted }}>{byline}</div>
-    {/* Satori has no inline rich text, and ignores textIndent when wrapping, so
-        the whole line is laid out in regular weight and a bold "TLDR:" is painted
-        over the regular one. The wider space absorbs bold's extra width. */}
+    <div style={{ marginTop: 20, fontSize: 34, color: inkMuted }}>{byline}</div>
     <div
       style={{
-        display: "flex",
-        position: "relative",
+        display: "block",
+        lineClamp: 4,
         marginTop: 44,
         fontSize: 34,
         lineHeight: 1.45,
+        color: ink,
       }}
     >
-      <div style={{ display: "block", lineClamp: 4, color: ink }}>
-        {`TLDR:\u2004${blurb}`}
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          fontWeight: 600,
-          color: inkStrong,
-          backgroundColor: surface,
-        }}
-      >
-        TLDR:
-      </div>
+      {blurb}
     </div>
   </div>
 );
