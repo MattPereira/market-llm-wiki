@@ -45,3 +45,11 @@
 ## [2026-09-16] ingest | Fed day!
   - Added: [summary](summaries/kyla-scanlon/2026-09-17-fed-day.md)
   - Notes: Scanlon covers the Fed's first hike since 2023 — oil shock plus AI capital demand driving prices, and the hike partly as credibility repair after Warsh's July no-guidance meeting pushed long yields up. Extends the same oil/Treasuries/AI chain as her 09-15 video; aligns with 1000x's 09-16 hike read from the opposite (monetary-asset-bullish) angle.
+
+## [2026-09-18] ingest | Zcash: Can ZEC hit $20,000 This Cycle?
+  - Source: [Taiki Maeda](https://www.youtube.com/watch?v=rF3wA0keKGw).
+  - Notes: Ingest failed: neither en-orig nor en captions available; yt-dlp --list-subs confirms no automatic captions or subtitles. No Raw or Summary created. Used temporary uv cache/tool directories after read-only defaults failed. Astro dev server started at http://localhost:4322.
+
+## [2026-09-18] ingest | Zcash: Can ZEC hit $20,000 This Cycle?
+  - Added: [summary](summaries/taiki-maeda/2026-09-18-zcash-can-zec-hit-20000-this-cycle.md)
+  - Notes: Retry of the earlier failed ingest of this URL — captions now available, Raw and Summary created. Maeda prices ZEC off historical Bitcoin-competitor market cap ratios (LTC 8% peak, BCH 10-20% sustained, silver/gold 13%): 5% of BTC = $5k, 20% = $20k. Shielded-pool reflexivity as the fundamental. First TP at 3-4% of BTC market cap (~$2.4-3.2k), leverage off there, spot held. Extends his 09-11 all-in thesis with explicit targets and an exit plan.
