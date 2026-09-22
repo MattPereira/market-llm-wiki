@@ -10,7 +10,12 @@ description: How to summarize and process content from /wiki/raw/
 
 The Summary is an abridgment: the source, shortened, in the source's own shape.
 Draft from the Raw alone; each source gets the shape its own content calls for.
-Follow its order and emphasis; name headings after its sections or topic shifts.
+Follow its order and emphasis. Use H2s for major source sections or topic shifts.
+Within a long section, mark meaningful turns in the argument with short
+**bold run-in labels** at the start of paragraphs. Use inline bold sparingly
+for a decisive claim, figure, or actor. When the author explicitly emphasizes a
+cited person, work, or source, bold the full reference phrase on first mention
+and link it to the cited URL when available.
 
 Cut repetition, pleasantries, sponsor reads, and tangents off the core content.
 Use attribution sparingly; prefer pronouns when referring to the source's author.
@@ -25,6 +30,9 @@ Walk the source section by section — by chapter for transcripts that have
 weight the source gives it, with authorship clear, and that every sentence
 in the draft traces back to the source. Add what is missing; remove what does not
 trace.
+
+Skim the body headings and bold text; they should reveal the argument's main
+turns in source order.
 
 Then check length against the Raw's `word_count` and `type`. Completeness wins over
 brevity: summaries of longer source content should be roughly 10-15% of the source length;

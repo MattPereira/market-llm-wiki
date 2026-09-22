@@ -4,6 +4,7 @@ import { satteri } from "@astrojs/markdown-satteri";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
+import { openExternalLinks } from "./src/lib/open-external-links.ts";
 import { stripAuthoredHeader } from "./src/lib/strip-authored-header.ts";
 
 export default defineConfig({
@@ -15,7 +16,10 @@ export default defineConfig({
       themes: { light: "github-light", dark: "github-dark-dimmed" },
       defaultColor: false,
     },
-    processor: satteri({ mdastPlugins: [stripAuthoredHeader] }),
+    processor: satteri({
+      mdastPlugins: [stripAuthoredHeader],
+      hastPlugins: [openExternalLinks],
+    }),
   },
   vite: {
     plugins: [tailwindcss()],
