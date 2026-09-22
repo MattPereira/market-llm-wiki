@@ -61,3 +61,11 @@
 ## [2026-09-22] ingest | Safety First
   - Updated: [summary](summaries/arthur-hayes/2026-09-21-safety-first.md)
   - Notes: Rewrote from the existing Raw under the revised summarize instructions, following the post's sections and retaining its compute, government funding, captive-insurance, and liquidity arguments.
+
+## [2026-09-22] ingest | THE HOLE
+  - Added: [summary](summaries/nick-nemeth/2026-04-04-the-hole.md)
+  - Notes: First Nick Nemeth (Mispriced Assets) entry; added `nick-nemeth` to creators.toml mapping substack `mispricedassets`. Nemeth, drawing on Tom Gober's forensic work, argues $1.54T of affiliated life/annuity reinsurance (235% of $657B industry surplus) is largely phantom — Brookfield's leaked Vermont captives funded at 3.7¢ via XOL assets Hannover reserves at zero — and that private-credit downgrades will expose it. This is the source behind Hayes's 09-21 Safety First captive-insurance section; consistent with it, Hayes adds the AI-debt channel and the bailout-liquidity trade. Source cites captive funding as both 3.7% and "5%"; kept both as written. Tagged macro only (no credit/insurance Topic exists).
+
+## [2026-09-22] ingest | THE HOLE
+  - Updated: [summary](summaries/nick-nemeth/2026-04-04-the-hole.md)
+  - Notes: Rewrote from the existing Raw under the revised summarize instructions (merged H2s, 15–20% length target; ~1,410 words vs 7,245 source). Merged minor sections (Every Time Anyone Looked into the Brookfield leak, The Fed Knows into How It Starts, Closing into What Happens Next). Kept source's 3.7% vs "5%" captive funding as written.

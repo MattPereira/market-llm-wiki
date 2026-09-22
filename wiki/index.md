@@ -19,6 +19,10 @@
 - [AI Agents](summaries/kyla-scanlon/2026-09-05-ai-agents.md) — 2026-09-05 · Kyla Scanlon — Agents edited a German dev wiki into a shared answer key for a timed training quiz; Scanlon calls it reward optimization, not rogue behavior.
 - [How to Get Rich in America](summaries/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md) — 2026-08-13 · Kyla Scanlon — Scanlon argues an economy rewarding ownership over labor, aging wealth, and opaque institutions pushes Americans toward speculation and young voters toward political exit.
 
+## Nick Nemeth
+
+- [THE HOLE](summaries/nick-nemeth/2026-04-04-the-hole.md) — 2026-04-04 · Nick Nemeth — Nemeth argues $1.54T of affiliated life-insurance reinsurance is largely phantom, leaving most top insurers insolvent once private-credit downgrades hit.
+
 ## Steady Lads
 
 - [Taiki: The Trading Chad](summaries/steady-lads/2026-09-11-taiki-the-trading-chad.md) — 2026-09-11 · Steady Lads — Taiki stays max-long ZEC while the panel favors BTC, Lighter, BNB, and selective AI tokens over broad altcoin exposure.
