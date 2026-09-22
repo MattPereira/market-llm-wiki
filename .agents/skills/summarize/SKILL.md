@@ -13,6 +13,7 @@ Draft from the Raw alone; each source gets the shape its own content calls for.
 Follow its order and emphasis; name headings after its sections or topic shifts.
 
 Cut repetition, pleasantries, sponsor reads, and tangents off the core content.
+Use attribution sparingly; prefer pronouns when referring to the source's author.
 Transcripts are raw — fix names, tickers, and numbers from context.
 
 Done when a draft body covers the source start to finish.
@@ -21,7 +22,7 @@ Done when a draft body covers the source start to finish.
 
 Walk the source section by section — by chapter for transcripts that have
 `chapters`. Confirm each claim, call, number, and chain of reasoning appears at the
-weight the source gives it, attributed to whoever made it, and that every sentence
+weight the source gives it, with authorship clear, and that every sentence
 in the draft traces back to the source. Add what is missing; remove what does not
 trace.
 

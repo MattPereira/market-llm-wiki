@@ -53,3 +53,11 @@
 ## [2026-09-18] ingest | Zcash: Can ZEC hit $20,000 This Cycle?
   - Added: [summary](summaries/taiki-maeda/2026-09-18-zcash-can-zec-hit-20000-this-cycle.md)
   - Notes: Retry of the earlier failed ingest of this URL — captions now available, Raw and Summary created. Maeda prices ZEC off historical Bitcoin-competitor market cap ratios (LTC 8% peak, BCH 10-20% sustained, silver/gold 13%): 5% of BTC = $5k, 20% = $20k. Shielded-pool reflexivity as the fundamental. First TP at 3-4% of BTC market cap (~$2.4-3.2k), leverage off there, spot held. Extends his 09-11 all-in thesis with explicit targets and an exit plan.
+
+## [2026-09-21] ingest | Safety First
+  - Added: [summary](summaries/arthur-hayes/2026-09-21-safety-first.md)
+  - Notes: First Arthur Hayes entry. Hayes reads the labs' Safety First slowdown as compute demand destruction threatening $1T+ of AI debt held via PE captive insurers/reinsurers (Nemeth's $1.54T estimate); both government responses (compute buyer of last resort or insurer bailout) print money, bullish BTC. Sides with the 09-16 1000x read that the Fed hike is not bearish, but for a different reason: bank-side money creation plus higher interest on reserves offsets the hike. Contrasts with Scanlon's 09-17 framing of AI capital demand as a squeeze on everyone else. Source spells Nemeth both "Nameth" and "Nemeth"; used Nemeth.
+
+## [2026-09-22] ingest | Safety First
+  - Updated: [summary](summaries/arthur-hayes/2026-09-21-safety-first.md)
+  - Notes: Rewrote from the existing Raw under the revised summarize instructions, following the post's sections and retaining its compute, government funding, captive-insurance, and liquidity arguments.

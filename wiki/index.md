@@ -7,6 +7,10 @@
 - [MARKET UPDATE: Hunter Biden Scams Us, $INTC Rips, Commodities Onchain, Anthropic's Skynet Risk](summaries/1000x/2026-09-10-market-update-hunter-biden-scams-us-intc-rips-commodities-onchain-anthropics-sky.md) — 2026-09-10 · 1000x — Avi turns short-term bearish Bitcoin below 70K and rotates into the AI/memory trade, while arguing crypto is where new commodity markets get born.
 - [MARKET UPDATE: Hot Payrolls, Hotter Memecoins, And Se From FOMO Talks The Future Of Trading](summaries/1000x/2026-09-04-market-update-hot-payrolls-hotter-memecoins-and-se-from-fomo-talks-the-future-of.md) — 2026-09-04 · 1000x — Hot payrolls revive Fed hike odds as memecoins rip; FOMO's Se argues the whole market is attention, on a platform where 94.4% lose money.
 
+## Arthur Hayes
+
+- [Safety First](summaries/arthur-hayes/2026-09-21-safety-first.md) — 2026-09-21 · Arthur Hayes — Hayes argues that slower AI compute demand will push the US toward subsidized compute or insurance bailouts, adding liquidity that lifts Bitcoin.
+
 ## Kyla Scanlon
 
 - [Fed day!](summaries/kyla-scanlon/2026-09-17-fed-day.md) — 2026-09-17 · Kyla Scanlon — Scanlon explains the Fed's first hike since 2023 as an inflation and credibility move it cannot use to fix an oil shock.
