@@ -54,7 +54,7 @@ title: "Source title"
 url: https://example.com/source
 upload_date: YYYY-MM-DD
 blurb: "One concise sentence saying what this source delivers."
-topics: ["macro", "crypto-markets"]
+topics: ["macro", "crypto"]
 ---
 ```
 

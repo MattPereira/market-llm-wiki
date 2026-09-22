@@ -6,7 +6,7 @@ title: "Zcash: All-in with my Net Worth."
 url: https://www.youtube.com/watch?v=VK6DKuuqPWw
 upload_date: 2026-09-11
 blurb: "Maeda argues ZEC's four-digit breakout begins a reflexive repricing as privacy adoption, institutional access, and Bitcoin diversification reinforce one another."
-topics: ["crypto-markets"]
+topics: ["crypto"]
 ---
 
 # Zcash: All-in with my Net Worth.

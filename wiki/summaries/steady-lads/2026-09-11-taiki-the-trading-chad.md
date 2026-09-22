@@ -6,7 +6,7 @@ title: "Taiki: The Trading Chad"
 url: https://www.youtube.com/watch?v=LgzowlHh-NA
 upload_date: 2026-09-11
 blurb: "Taiki stays max-long ZEC while the panel favors BTC, Lighter, BNB, and selective AI tokens over broad altcoin exposure."
-topics: ["crypto-markets", "trading-culture", "macro", "ai"]
+topics: ["crypto", "macro", "ai"]
 ---
 
 # Taiki: The Trading Chad

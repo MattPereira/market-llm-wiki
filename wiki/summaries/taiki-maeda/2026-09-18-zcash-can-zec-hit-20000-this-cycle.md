@@ -6,7 +6,7 @@ title: "Zcash: Can ZEC hit $20,000 This Cycle?"
 url: https://www.youtube.com/watch?v=rF3wA0keKGw
 upload_date: 2026-09-18
 blurb: "Maeda anchors five-digit ZEC targets to historical Bitcoin-competitor market cap ratios and sets a first profit-take at 3-4% of Bitcoin's market cap."
-topics: ["crypto-markets", "trading-culture"]
+topics: ["crypto"]
 ---
 
 # Zcash: Can ZEC hit $20,000 This Cycle?

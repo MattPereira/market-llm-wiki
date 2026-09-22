@@ -6,7 +6,7 @@ title: "How to Get Rich in America"
 url: https://kyla.substack.com/p/how-to-get-rich-in-america
 upload_date: 2026-08-13
 blurb: "Scanlon argues an economy rewarding ownership over labor, aging wealth, and opaque institutions pushes Americans toward speculation and young voters toward political exit."
-topics: ["macro", "trading-culture", "ai"]
+topics: ["macro", "ai"]
 ---
 
 # How to Get Rich in America

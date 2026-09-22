@@ -3,9 +3,9 @@ import { parseTopics, topicName, topicSlug, topicSlugs } from "./topics.js";
 
 describe("parseTopics", () => {
   it("maps each topic slug to its display name", () => {
-    const topics = parseTopics(`[crypto-markets]\nname = "Crypto Markets"\n`);
+    const topics = parseTopics(`[crypto]\nname = "Crypto"\n`);
 
-    expect(topics.get("crypto-markets")).toBe("Crypto Markets");
+    expect(topics.get("crypto")).toBe("Crypto");
   });
 
   it("rejects a topic without a name", () => {
@@ -26,7 +26,7 @@ describe("topicName", () => {
 describe("topicSlugs", () => {
   it("lists the whole vocabulary", () => {
     expect(topicSlugs()).toEqual(
-      expect.arrayContaining(["macro", "crypto-markets", "trading-culture", "ai"]),
+      expect.arrayContaining(["macro", "crypto", "ai"]),
     );
   });
 });
@@ -38,6 +38,6 @@ describe("topicSlug", () => {
 
   it("names the offending topic and the vocabulary when it fails", () => {
     expect(() => topicSlug.parse("defi")).toThrow(/defi/);
-    expect(() => topicSlug.parse("defi")).toThrow(/crypto-markets/);
+    expect(() => topicSlug.parse("defi")).toThrow(/crypto/);
   });
 });

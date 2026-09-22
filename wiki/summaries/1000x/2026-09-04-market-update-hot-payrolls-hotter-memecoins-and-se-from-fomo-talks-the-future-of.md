@@ -5,7 +5,7 @@ title: "MARKET UPDATE: Hot Payrolls, Hotter Memecoins, And Se From FOMO Talks Th
 url: https://www.youtube.com/watch?v=QVDm--18QBs
 upload_date: 2026-09-04
 blurb: "Hot payrolls revive Fed hike odds as memecoins rip; FOMO's Se argues the whole market is attention, on a platform where 94.4% lose money."
-topics: ["macro", "crypto-markets", "trading-culture"]
+topics: ["macro", "crypto", "equities"]
 ---
 
 # MARKET UPDATE: Hot Payrolls, Hotter Memecoins, And Se From FOMO Talks The Future Of Trading

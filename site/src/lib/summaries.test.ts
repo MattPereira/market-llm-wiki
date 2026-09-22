@@ -8,10 +8,10 @@ const summary = (id: string, date: string, topics: string[]) => ({
 
 const kyla = summary("kyla-scanlon/2026-09-05-ai-agents", "2026-09-05", ["ai"]);
 const taiki = summary("taiki-maeda/2026-07-15-bottoming", "2026-07-15", [
-  "crypto-markets",
+  "crypto",
 ]);
 const thousand = summary("1000x/2026-09-04-market-update", "2026-09-04", [
-  "crypto-markets",
+  "crypto",
   "ai",
 ]);
 
@@ -56,7 +56,7 @@ describe("byTopic", () => {
   it("collects a topic across creators, newest first", () => {
     const grouped = byTopic([taiki, kyla, thousand]);
 
-    expect(grouped.get("crypto-markets")?.map((s) => s.id)).toEqual([
+    expect(grouped.get("crypto")?.map((s) => s.id)).toEqual([
       thousand.id,
       taiki.id,
     ]);

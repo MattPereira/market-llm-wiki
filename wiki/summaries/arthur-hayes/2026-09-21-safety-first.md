@@ -6,7 +6,7 @@ title: "Safety First"
 url: https://cryptohayes.substack.com/p/safety-first
 upload_date: 2026-09-21
 blurb: "Hayes argues that slower AI compute demand will push the US toward subsidized compute or insurance bailouts, adding liquidity that lifts Bitcoin."
-topics: ["ai", "macro", "crypto-markets"]
+topics: ["ai", "macro", "crypto"]
 ---
 
 # Safety First

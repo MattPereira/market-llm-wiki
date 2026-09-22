@@ -16,19 +16,25 @@
 name = "Macro"
 # Rates, central banks, inflation and employment prints, currencies, sovereign debt.
 # The forces acting on every asset at once. A Summary about what the Fed will do is
-# macro; a Summary about what to buy because of it is also crypto-markets.
+# macro; a Summary about what to buy because of it is also crypto.
 
-[crypto-markets]
-name = "Crypto Markets"
+[crypto]
+name = "Crypto"
 # Cycle calls, token theses, sector rotations, positioning in specific crypto assets.
-# The "what to own and why" of crypto. Differs from trading-culture, which is about
-# how people trade rather than what the trade is.
+# The "what to own and why" of crypto.
 
-[trading-culture]
-name = "Trading Culture"
-# Retail behaviour and the venues that shape it: attention as a tradable input,
-# memecoins, social and copy trading, brokerage products, who is losing money and how.
-# About participants and plumbing, not about any particular asset's fundamentals.
+[equities]
+name = "Equities"
+# Single stocks, earnings, sectors, indices: the "what to own and why" of the stock
+# market, as crypto is for tokens. Tokenized stocks count when the stock trade itself
+# is discussed. An AI company as a technology story is ai; its stock as a trade is
+# equities; a Summary doing both carries both.
+
+[commodities]
+name = "Commodities"
+# Oil, metals, energy, agriculture as physical markets and trades: supply, pricing,
+# who can participate, where a price is heading. Differs from macro: an oil shock
+# driving inflation and a Fed hike is macro; the oil market itself is commodities.
 
 [ai]
 name = "AI"

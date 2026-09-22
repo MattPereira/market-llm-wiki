@@ -6,7 +6,7 @@ title: "Oil, Treasuries, and AI"
 url: https://www.youtube.com/watch?v=6Vr085pEcro
 upload_date: 2026-09-15
 blurb: "Scanlon links an oil shock and AI's borrowing binge to inflation, rising Treasury yields, and the loss of cheap money AI requires."
-topics: ["macro", "ai"]
+topics: ["macro", "ai", "commodities"]
 ---
 
 # Oil, Treasuries, and AI
