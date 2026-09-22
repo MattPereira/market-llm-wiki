@@ -53,8 +53,9 @@ const name = creatorName(creator);
         <TopicLinks topics={summary.data.topics} />
       </nav>
       <p
-        class="mt-8 max-w-[65ch] border-l-2 border-ink-muted pl-5 text-lg font-medium italic leading-relaxed text-ink-muted"
+        class="mt-8 max-w-[65ch] text-lg leading-relaxed text-ink text-pretty"
       >
+        <strong class="font-semibold text-ink-strong">TLDR:</strong>{" "}
         {summary.data.blurb}
       </p>
     </header>
