@@ -5,7 +5,7 @@ const FILE = "creators.toml";
 export const parseCreators = (toml: string): Map<string, string> =>
   parseNamedTables(toml, FILE);
 
-const creators = loadNamedTables(FILE);
+const creators = () => loadNamedTables(FILE);
 
 /**
  * Throws rather than falling back to the slug: a slug leaking into a page is the
@@ -13,9 +13,9 @@ const creators = loadNamedTables(FILE);
  * folder is a reconciliation the ingest scripts already warn about.
  */
 export const creatorName = (slug: string): string =>
-  nameFor(creators, slug, FILE);
+  nameFor(creators(), slug, FILE);
 
-export const creatorSlugs = (): string[] => [...creators.keys()];
+export const creatorSlugs = (): string[] => [...creators().keys()];
 
 /**
  * A Creator lives at `/<slug>/`, a top-level dynamic route, so a slug matching one

@@ -32,6 +32,8 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    // OG images use a native Node binding; Vite's client optimizer cannot bundle it.
+    optimizeDeps: { exclude: ["@resvg/resvg-js"] },
     // Summaries live outside site/, so the dev server has to read up a level.
     server: { fs: { allow: [".."] } },
   },
