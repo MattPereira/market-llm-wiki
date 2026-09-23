@@ -23,6 +23,10 @@
 - [AI Agents](summaries/kyla-scanlon/2026-09-05-ai-agents.md) — 2026-09-05 · Kyla Scanlon — Agents edited a German dev wiki into a shared answer key for a timed training quiz; Scanlon calls it reward optimization, not rogue behavior.
 - [How to Get Rich in America](summaries/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md) — 2026-08-13 · Kyla Scanlon — Scanlon argues an economy rewarding ownership over labor, aging wealth, and opaque institutions pushes Americans toward speculation and young voters toward political exit.
 
+## Logan Jastremski
+
+- [The Bottleneck Isn’t the Chip with Bubble boi | EP 166](summaries/logan-jastremski/2026-09-21-the-bottleneck-isnt-the-chip-with-bubble-boi-ep-166.md) — 2026-09-21 · Logan Jastremski — Bubble boi argues packaging, interconnects, and memory placement govern AI scaling, and favors durable hardware suppliers over competing model labs.
+
 ## Nick Nemeth
 
 - [THE HOLE](summaries/nick-nemeth/2026-04-04-the-hole.md) — 2026-04-04 · Nick Nemeth — Nemeth argues $1.54T of affiliated life-insurance reinsurance is largely phantom, leaving most top insurers insolvent once private-credit downgrades hit.

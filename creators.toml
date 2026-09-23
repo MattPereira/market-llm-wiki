@@ -60,3 +60,8 @@ host = "https://mispricedassets.substack.com"
 [bankless]
 name = "Bankless"
 youtube = ["bankless"]
+
+[logan-jastremski]
+name = "Logan Jastremski"
+youtube = ["frictionless-with-logan-jastremski"]
+channel = "https://www.youtube.com/channel/UC8__jTM6-_GOkRmOBPrTB0A"

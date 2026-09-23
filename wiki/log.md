@@ -77,3 +77,7 @@
 ## [2026-09-22] ingest | Cloudflare CEO: The Internet Needs Crypto to Survive AI
   - Updated: [summary](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md)
   - Notes: Rebuilt from the existing Raw under the updated summarize instructions. Preserves Prince's case for creator control and payment, the 5–50M-per-second capacity problem, and his concerns about access and market concentration. No source fetch.
+
+## [2026-09-23] ingest | The Bottleneck Isn’t the Chip with Bubble boi | EP 166
+  - Added: [summary](summaries/logan-jastremski/2026-09-21-the-bottleneck-isnt-the-chip-with-bubble-boi-ep-166.md)
+  - Notes: Raw was already present; skipped scripts/ingest.py. First Logan Jastremski entry; added the creator and channel to creators.toml. Bubble boi argues packaging, interconnects, and context memory are the AI bottlenecks, and favors hardware suppliers over model labs. Rubin Ultra changes and HBF customer interest remain his reported, unconfirmed claims.
