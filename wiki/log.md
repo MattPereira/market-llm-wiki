@@ -81,3 +81,7 @@
 ## [2026-09-23] ingest | The Bottleneck Isn’t the Chip with Bubble boi | EP 166
   - Added: [summary](summaries/logan-jastremski/2026-09-21-the-bottleneck-isnt-the-chip-with-bubble-boi-ep-166.md)
   - Notes: Raw was already present; skipped scripts/ingest.py. First Logan Jastremski entry; added the creator and channel to creators.toml. Bubble boi argues packaging, interconnects, and context memory are the AI bottlenecks, and favors hardware suppliers over model labs. Rubin Ultra changes and HBF customer interest remain his reported, unconfirmed claims.
+
+## [2026-09-23] ingest | MARKET UPDATE: Meta, Bitcoin, Crude And The Economy Are All Ripping. How Long Can It Last?
+  - Added: [summary](summaries/1000x/2026-09-23-market-update-meta-bitcoin-crude-and-the-economy-are-all-ripping-how-long-can-it.md)
+  - Notes: YouTube had no captions, so Raw was generated from local speech-to-text. Hosts favor demand-led copper, AI infrastructure, Bitcoin and selected crypto despite higher yields; they disagree over Zcash timing and the meaning of income inequality. Market levels, product uptake and return targets are speaker claims.

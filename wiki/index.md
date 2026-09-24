@@ -2,6 +2,7 @@
 
 ## 1000x
 
+- [MARKET UPDATE: Meta, Bitcoin, Crude And The Economy Are All Ripping. How Long Can It Last?](summaries/1000x/2026-09-23-market-update-meta-bitcoin-crude-and-the-economy-are-all-ripping-how-long-can-it.md) — 2026-09-23 · 1000x — 1000x favors demand-led copper, AI infrastructure, Bitcoin and selected crypto despite rising yields, while the hosts dispute inequality's meaning.
 - [MARKET UPDATE: Crypto Is Used To Buy Oil?! FED Meeting, And Economy Ripping](summaries/1000x/2026-09-16-market-update-crypto-is-used-to-buy-oil-fed-meeting-and-economy-ripping.md) — 2026-09-16 · 1000x — Avi expects Fed–Treasury conflict to favor monetary assets, while Jonah favors copper and cheaper AI as drivers of a continuing bull market.
 - [MARKET UPDATE: Live With GMoney, Inflation Is In, Is This The Crypto Top?](summaries/1000x/2026-09-11-market-update-live-with-gmoney-inflation-is-in-is-this-the-crypto-top.md) — 2026-09-11 · 1000x — GMoney argues tokenized stocks are reviving on-chain experimentation while AI's strategic importance keeps him bullish despite rate-hike risk.
 - [MARKET UPDATE: Hunter Biden Scams Us, $INTC Rips, Commodities Onchain, Anthropic's Skynet Risk](summaries/1000x/2026-09-10-market-update-hunter-biden-scams-us-intc-rips-commodities-onchain-anthropics-sky.md) — 2026-09-10 · 1000x — Avi turns short-term bearish Bitcoin below 70K and rotates into the AI/memory trade, while arguing crypto is where new commodity markets get born.
