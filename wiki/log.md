@@ -85,3 +85,7 @@
 ## [2026-09-23] ingest | MARKET UPDATE: Meta, Bitcoin, Crude And The Economy Are All Ripping. How Long Can It Last?
   - Added: [summary](summaries/1000x/2026-09-23-market-update-meta-bitcoin-crude-and-the-economy-are-all-ripping-how-long-can-it.md)
   - Notes: YouTube had no captions, so Raw was generated from local speech-to-text. Hosts favor demand-led copper, AI infrastructure, Bitcoin and selected crypto despite higher yields; they disagree over Zcash timing and the meaning of income inequality. Market levels, product uptake and return targets are speaker claims.
+
+## [2026-09-24] ingest | Finding the Trades Institutions Won't Touch | DegentradingLSD
+  - Added: [summary](summaries/insilico-terminal/2026-09-24-finding-the-trades-institutions-wont-touch-degentradinglsd.md)
+  - Notes: First Insilico Terminal entry; added the creator and channel to creators.toml. DegentradingLSD favors institutionally neglected trades, cash reserves, memory equities, and tightly held ZEC; his AI demand, ZEC supply, and token-return expectations remain speaker claims.

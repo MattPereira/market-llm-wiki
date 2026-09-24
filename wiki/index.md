@@ -16,6 +16,10 @@
 
 - [Cloudflare CEO: The Internet Needs Crypto to Survive AI](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md) — 2026-05-25 · Bankless — Matthew Prince argues AI answers threaten creator revenue and proposes controlled access and stablecoin payments, while warning that scale and concentration remain unsolved.
 
+## Insilico Terminal
+
+- [Finding the Trades Institutions Won't Touch | DegentradingLSD](summaries/insilico-terminal/2026-09-24-finding-the-trades-institutions-wont-touch-degentradinglsd.md) — 2026-09-24 · Insilico Terminal — DegentradingLSD seeks trades institutions avoid, keeps cash for drawdowns, and favors select AI equities and crypto narratives over broad market bets.
+
 ## Kyla Scanlon
 
 - [Fed day!](summaries/kyla-scanlon/2026-09-17-fed-day.md) — 2026-09-17 · Kyla Scanlon — Scanlon explains the Fed's first hike since 2023 as an inflation and credibility move it cannot use to fix an oil shock.
