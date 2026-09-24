@@ -1,5 +1,4 @@
 import { useEffect, useRef, type CSSProperties } from "react";
-import { RiCircleFill } from "@remixicon/react";
 
 export function ReadingProgress() {
   const track = useRef<HTMLDivElement>(null);
@@ -38,14 +37,10 @@ export function ReadingProgress() {
     <div
       ref={track}
       aria-hidden="true"
-      // x-only clip: stops the knob overhanging the right edge into a horizontal scrollbar, without cropping its height.
-      className="pointer-events-none absolute inset-x-0 -bottom-px h-0.5 overflow-x-clip"
+      className="pointer-events-none absolute inset-x-0 -bottom-px h-0.75"
       style={{ "--progress": 0 } as CSSProperties}
     >
-      <div className="bg-ink-strong h-full origin-left scale-x-(--progress)" />
-      <div className="absolute inset-0 translate-x-[calc(var(--progress)*100%)]">
-        <RiCircleFill className="text-ink-strong absolute top-1/2 left-0 size-2.5 -translate-1/2" />
-      </div>
+      <div className="bg-ink-muted h-full origin-left scale-x-(--progress)" />
     </div>
   );
 }
