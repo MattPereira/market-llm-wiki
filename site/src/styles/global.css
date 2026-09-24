@@ -119,6 +119,8 @@
   html {
     color-scheme: light dark;
     -webkit-text-size-adjust: 100%;
+    /* Keeps anchor jumps from landing under the sticky header (h-14). */
+    scroll-padding-top: 3.5rem;
   }
 
   body {

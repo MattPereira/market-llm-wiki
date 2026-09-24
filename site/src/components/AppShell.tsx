@@ -18,6 +18,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { ReadingProgress } from "@/components/ReadingProgress";
 
 // Lives here rather than in Base.astro: icon components can't cross the island boundary as props.
 const links = [
@@ -72,9 +73,10 @@ export function AppShell({ active, themeToggle, children }: Props) {
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
-        <header className="border-edge flex h-14 items-center gap-2 border-b px-3">
+        <header className="border-edge bg-surface sticky top-0 z-10 flex h-14 items-center gap-2 border-b px-3">
           <SidebarTrigger className="text-ink-muted" />
           <div className="ml-auto flex items-center">{themeToggle}</div>
+          <ReadingProgress />
         </header>
         {children}
       </SidebarInset>
