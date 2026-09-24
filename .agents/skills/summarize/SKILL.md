@@ -19,7 +19,6 @@ cited person, work, or source, bold the full reference phrase on first mention
 and link it to the cited URL when available.
 
 Cut repetition, pleasantries, sponsor reads, and tangents off the core content.
-Use attribution sparingly; prefer pronouns when referring to the source's author.
 Transcripts are raw — fix names, tickers, and numbers from context.
 
 Done when a draft body covers the source's major arguments, predictions, and
