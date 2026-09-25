@@ -1,9 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import BrowseList from "../components/BrowseList.astro";
+import CreatorCards from "../components/CreatorCards.astro";
 import Base from "../layouts/Base.astro";
 import { creatorName } from "../lib/creators";
-import { formatDate, summaryCount } from "../lib/format";
 import { byCreator } from "../lib/summaries";
 
 // Driven by the Summaries on disk, not by creators.toml — deliberately unlike
@@ -12,16 +11,24 @@ import { byCreator } from "../lib/summaries";
 // page with nothing on it and no way to tell whether that is a bug.
 const grouped = byCreator(await getCollection("summaries"));
 
-const items = [...grouped]
+const creators = [...grouped]
   .map(([slug, summaries]) => ({
     href: `/${slug}/`,
     name: creatorName(slug),
-    note: `${summaryCount(summaries.length)} · latest ${formatDate(summaries[0]!.data.upload_date)}`,
+    count: summaries.length,
+    latest: summaries[0]!.data.upload_date,
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Base title="Creators — Market LLM Wiki" description="Everyone the wiki covers.">
-  <h1 class="sr-only">Creators</h1>
-  <BrowseList items={items} />
+  <header class="mb-12">
+    <h1
+      class="font-serif text-3xl font-semibold tracking-tight text-ink-strong"
+    >
+      Creators
+    </h1>
+  </header>
+
+  <CreatorCards creators={creators} />
 </Base>

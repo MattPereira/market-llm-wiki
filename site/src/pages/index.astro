@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
+import CreatorCards from "../components/CreatorCards.astro";
 import SummaryList from "../components/SummaryList.astro";
 import Base from "../layouts/Base.astro";
 import { creatorName } from "../lib/creators";
-import { formatShortDate, summaryCount } from "../lib/format";
+import { summaryCount } from "../lib/format";
 import { byCreator, newestFirst } from "../lib/summaries";
 import { topicSlugs } from "../lib/topics";
 
@@ -107,28 +108,7 @@ const allLink =
         aria-labelledby="tab-creators"
         hidden
       >
-        <ul class="grid gap-4 sm:grid-cols-2">
-          {
-            creators.map((creator) => (
-              <li>
-                <a
-                  class="group border-edge hover:border-ink-muted block h-full rounded-lg border p-5"
-                  href={creator.href}
-                >
-                  <h2 class="font-serif text-xl font-semibold text-ink-strong group-hover:decoration-ink-muted group-hover:underline group-hover:underline-offset-4">
-                    {creator.name}
-                  </h2>
-                  <p class="mt-1 text-ink-muted text-base">
-                    {summaryCount(creator.count)} · latest{" "}
-                    <time datetime={creator.latest.toISOString()}>
-                      {formatShortDate(creator.latest)}
-                    </time>
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <CreatorCards creators={creators} />
       </div>
     </div>
   </div>

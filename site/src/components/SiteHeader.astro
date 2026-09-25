@@ -16,6 +16,10 @@ const iconButton = cn(
   buttonVariants({ variant: "ghost", size: "icon-lg" }),
   "text-ink-muted",
 );
+const navLink = cn(
+  buttonVariants({ variant: "ghost", size: "lg" }),
+  "px-3 text-base font-normal",
+);
 const current = (href: string) => (href === active ? "page" : undefined);
 const activeClass = "bg-accent text-accent-foreground";
 ---
@@ -29,10 +33,10 @@ const activeClass = "bg-accent text-accent-foreground";
       </div>
       <a
         href="/"
-        aria-label="Home"
-        class={cn(iconButton, "text-ink-strong")}
+        aria-current={current("/")}
+        class={cn(navLink, active === "/" && activeClass)}
       >
-        <Icon name="ri:stock-line" class="size-6" aria-hidden="true" />
+        Home
       </a>
       <nav aria-label="Main" class="hidden md:block">
         <ul class="flex items-center gap-1">
@@ -42,11 +46,7 @@ const activeClass = "bg-accent text-accent-foreground";
                 <a
                   href={href}
                   aria-current={current(href)}
-                  class={cn(
-                    buttonVariants({ variant: "ghost", size: "lg" }),
-                    "px-3 text-base font-normal",
-                    href === active && activeClass,
-                  )}
+                  class={cn(navLink, href === active && activeClass)}
                 >
                   {label}
                 </a>
