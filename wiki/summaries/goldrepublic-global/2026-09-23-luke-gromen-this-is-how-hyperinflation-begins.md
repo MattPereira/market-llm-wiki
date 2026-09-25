@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/goldrepublic-global/2026-09-23-luke-gromen-this-is-how-hyperinflation-begins.md
 title: "Luke Gromen: This Is How Hyperinflation Begins"
 url: https://www.youtube.com/watch?v=9dUte6c7ZcM
-upload_date: 2026-09-23
+publish_date: 2026-09-23
+created_at: 2026-09-25T20:22:07Z
 blurb: "Gromen expects debt stress and physical shortages to erode bonds' purchasing power, favoring gold, Bitcoin, and selectively miners."
 topics: ["macro", "commodities", "crypto"]
 ---

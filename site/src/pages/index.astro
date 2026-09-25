@@ -1,28 +1,20 @@
 ---
 import { getCollection } from "astro:content";
-import CreatorCards from "../components/CreatorCards.astro";
 import SummaryList from "../components/SummaryList.astro";
 import Base from "../layouts/Base.astro";
-import { creatorName } from "../lib/creators";
 import { summaryCount } from "../lib/format";
-import { byCreator, newestFirst } from "../lib/summaries";
+import { creatorSlug } from "../lib/summaries";
 import { topicSlugs } from "../lib/topics";
 
-const RECENT = 5;
+const RECENT = 3;
 const TAGLINE = "Agent-written summaries of market commentary.";
 
 const summaries = await getCollection("summaries");
-const recent = newestFirst(summaries).slice(0, RECENT);
+const recent = [...summaries]
+  .sort((a, b) => b.data.created_at.valueOf() - a.data.created_at.valueOf())
+  .slice(0, RECENT);
 
-// Most recently active first, unlike /creators/: home leads with what's new.
-const creators = [...byCreator(summaries)]
-  .map(([slug, own]) => ({
-    href: `/${slug}/`,
-    name: creatorName(slug),
-    count: own.length,
-    latest: own[0]!.data.upload_date,
-  }))
-  .sort((a, b) => b.latest.valueOf() - a.latest.valueOf());
+const creatorCount = new Set(summaries.map((s) => creatorSlug(s.id))).size;
 
 const plural = (count: number, noun: string) =>
   `${count} ${count === 1 ? noun : `${noun}s`}`;
@@ -30,20 +22,9 @@ const plural = (count: number, noun: string) =>
 // Topics counts the whole vocabulary, matching what /topics/ lists.
 const stats = [
   { href: "/summaries/", label: summaryCount(summaries.length) },
-  { href: "/creators/", label: plural(creators.length, "creator") },
+  { href: "/creators/", label: plural(creatorCount, "creator") },
   { href: "/topics/", label: plural(topicSlugs().length, "topic") },
 ];
-
-const tabs = [
-  { id: "summaries", label: "Summaries" },
-  { id: "creators", label: "Creators" },
-];
-
-// -mb-px lets the selected tab's underline sit on top of the tablist border.
-const tabButton =
-  "-mb-px border-b-2 border-transparent pb-3 font-serif text-2xl font-semibold tracking-tight text-ink-muted hover:text-ink-strong aria-selected:border-ink-strong aria-selected:text-ink-strong";
-const allLink =
-  "text-ink-muted hover:text-ink-strong text-base whitespace-nowrap";
 ---
 
 <Base title="Market LLM Wiki" description={TAGLINE}>
@@ -71,97 +52,20 @@ const allLink =
       </p>
     </header>
 
-    <div data-tabs>
-      <div
-        role="tablist"
-        aria-label="Browse"
-        class="border-edge mb-6 flex gap-6 border-b"
+    <section aria-labelledby="recent-heading">
+      <h2
+        id="recent-heading"
+        class="border-edge mb-6 border-b pb-3 font-serif text-2xl font-semibold tracking-tight text-ink-strong"
       >
-        {
-          tabs.map((tab, i) => (
-            <button
-              id={`tab-${tab.id}`}
-              class={tabButton}
-              type="button"
-              role="tab"
-              aria-controls={`panel-${tab.id}`}
-              aria-selected={i === 0 ? "true" : "false"}
-              tabindex={i === 0 ? 0 : -1}
-              data-tab={tab.id}
-            >
-              {tab.label}
-            </button>
-          ))
-        }
+        Recent
+      </h2>
+      <SummaryList summaries={recent} headingLevel={3} compact />
+      <div class="border-edge border-t pt-4 text-right">
+        <a
+          class="text-ink-muted hover:text-ink-strong text-base whitespace-nowrap"
+          href="/summaries/">All summaries →</a
+        >
       </div>
-
-      <div id="panel-summaries" role="tabpanel" aria-labelledby="tab-summaries">
-        <SummaryList summaries={recent} headingLevel={2} compact />
-        <div class="border-edge border-t pt-4 text-right">
-          <a class={allLink} href="/summaries/">All summaries →</a>
-        </div>
-      </div>
-
-      <div
-        id="panel-creators"
-        role="tabpanel"
-        aria-labelledby="tab-creators"
-        hidden
-      >
-        <CreatorCards creators={creators} />
-      </div>
-    </div>
+    </section>
   </div>
-  <script is:inline>
-    // Delegated: the page content sits inside the React island, which can swap nodes out on hydration.
-    (() => {
-      const select = (id) => {
-        const root = document.querySelector("[data-tabs]");
-        const tab = root?.querySelector(`[data-tab="${id}"]`);
-        if (!tab) return;
-        for (const other of root.querySelectorAll("[role=tab]")) {
-          const on = other === tab;
-          other.setAttribute("aria-selected", String(on));
-          other.tabIndex = on ? 0 : -1;
-          const panel = document.getElementById(
-            other.getAttribute("aria-controls"),
-          );
-          panel.hidden = !on;
-        }
-      };
-
-      const fromHash = () =>
-        location.hash === "#creators" ? "creators" : "summaries";
-
-      document.addEventListener("click", (event) => {
-        const tab = event.target.closest("[data-tabs] [role=tab]");
-        if (!tab) return;
-        select(tab.dataset.tab);
-        // replaceState so switching tabs doesn't fill the back button history.
-        const hash = tab.dataset.tab === "summaries" ? "" : "#creators";
-        history.replaceState(null, "", location.pathname + hash);
-      });
-
-      const KEYS = ["ArrowLeft", "ArrowRight", "Home", "End"];
-      document.addEventListener("keydown", (event) => {
-        const tab = event.target.closest?.("[data-tabs] [role=tab]");
-        if (!tab || !KEYS.includes(event.key)) return;
-        const all = [...tab.parentElement.querySelectorAll("[role=tab]")];
-        const i = all.indexOf(tab);
-        const step = event.key === "ArrowRight" ? 1 : -1;
-        const next =
-          event.key === "Home"
-            ? 0
-            : event.key === "End"
-              ? all.length - 1
-              : (i + step + all.length) % all.length;
-        event.preventDefault();
-        all[next].click();
-        all[next].focus();
-      });
-
-      window.addEventListener("hashchange", () => select(fromHash()));
-      select(fromHash());
-    })();
-  </script>
 </Base>

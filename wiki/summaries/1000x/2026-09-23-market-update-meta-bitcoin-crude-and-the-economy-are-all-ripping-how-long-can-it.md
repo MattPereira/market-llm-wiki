@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/1000x/2026-09-23-market-update-meta-bitcoin-crude-and-the-economy-are-all-ripping-how-long-can-it.md
 title: "MARKET UPDATE: Meta, Bitcoin, Crude And The Economy Are All Ripping. How Long Can It Last?"
 url: https://www.youtube.com/watch?v=LbYfb1nZFl4
-upload_date: 2026-09-23
+publish_date: 2026-09-23
+created_at: 2026-09-24T00:17:24Z
 blurb: "1000x favors demand-led copper, AI infrastructure, Bitcoin and selected crypto despite rising yields, while the hosts dispute inequality's meaning."
 topics: ["macro", "crypto", "equities", "commodities", "ai"]
 ---

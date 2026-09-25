@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md
 title: "Oil, Treasuries, and AI"
 url: https://www.youtube.com/watch?v=6Vr085pEcro
-upload_date: 2026-09-15
+publish_date: 2026-09-15
+created_at: 2026-09-15T03:42:53Z
 blurb: "Scanlon links an oil shock and AI's borrowing binge to inflation, rising Treasury yields, and the loss of cheap money AI requires."
 topics: ["macro", "ai", "commodities"]
 ---

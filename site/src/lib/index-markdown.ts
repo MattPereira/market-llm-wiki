@@ -4,7 +4,7 @@ import { byCreator, creatorSlug, type ListedSummary } from "./summaries.js";
 /** The slice of a Summary the Index renders. */
 export interface IndexedSummary extends ListedSummary {
   data: {
-    upload_date: Date;
+    publish_date: Date;
     topics: readonly string[];
     title: string;
     blurb: string;
@@ -16,7 +16,7 @@ const isoDate = (date: Date): string => date.toISOString().slice(0, 10);
 
 /** Links are resolved from `wiki/index.md`, and the id mirrors the file tree. */
 const entry = (summary: IndexedSummary): string =>
-  `- [${summary.data.title}](summaries/${summary.id}.md) — ${isoDate(summary.data.upload_date)} · ${creatorName(creatorSlug(summary.id))} — ${summary.data.blurb}`;
+  `- [${summary.data.title}](summaries/${summary.id}.md) — ${isoDate(summary.data.publish_date)} · ${creatorName(creatorSlug(summary.id))} — ${summary.data.blurb}`;
 
 /**
  * Pure: filesystem reads and the write to `wiki/index.md` live in the generator

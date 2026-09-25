@@ -62,10 +62,10 @@ const Heading = `h${headingLevel}` as const;
                 <span aria-hidden="true">·</span>
               </>
             )}
-            <time datetime={summary.data.upload_date.toISOString()}>
+            <time datetime={summary.data.publish_date.toISOString()}>
               {compact
-                ? formatShortDate(summary.data.upload_date)
-                : formatDate(summary.data.upload_date)}
+                ? formatShortDate(summary.data.publish_date)
+                : formatDate(summary.data.publish_date)}
             </time>
             {!compact && topics.length > 0 && (
               <>

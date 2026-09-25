@@ -54,8 +54,8 @@ const metaLink =
             href={`/${creator}/`}>{name}</a
           >
           <span aria-hidden="true"> · </span>
-          <time datetime={summary.data.upload_date.toISOString()}>
-            {formatDate(summary.data.upload_date)}
+          <time datetime={summary.data.publish_date.toISOString()}>
+            {formatDate(summary.data.publish_date)}
           </time>
           <span aria-hidden="true"> · </span>
           <a

@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/naly/2026-09-25-will-rising-bond-yields-crash-the.md
 title: "Will rising bond yields crash the market? (Or do you just need to close Twitter?)"
 url: https://bloomresearch.substack.com/p/will-rising-bond-yields-crash-the
-upload_date: 2026-09-25
+publish_date: 2026-09-25
+created_at: 2026-09-25T20:25:14Z
 blurb: "Naly weighs bond-market stress against currency dilution and shifts some NEAR and ZEC profits into cash and gold to protect a risk-heavy portfolio."
 topics: ["macro", "crypto"]
 ---

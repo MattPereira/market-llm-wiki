@@ -16,7 +16,7 @@ const creators = [...grouped]
     href: `/${slug}/`,
     name: creatorName(slug),
     count: summaries.length,
-    latest: summaries[0]!.data.upload_date,
+    latest: summaries[0]!.data.publish_date,
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---

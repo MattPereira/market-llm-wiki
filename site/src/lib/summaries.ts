@@ -2,7 +2,7 @@
  * collection entry so they stay testable without the content layer. */
 export interface ListedSummary {
   id: string;
-  data: { upload_date: Date; topics: readonly string[] };
+  data: { publish_date: Date; topics: readonly string[] };
 }
 
 /** Permalinks mirror the file tree, so the id's first segment is the Creator. */
@@ -10,7 +10,7 @@ export const creatorSlug = (id: string): string => id.split("/")[0]!;
 
 export const newestFirst = <T extends ListedSummary>(summaries: readonly T[]): T[] =>
   [...summaries].sort(
-    (a, b) => b.data.upload_date.valueOf() - a.data.upload_date.valueOf(),
+    (a, b) => b.data.publish_date.valueOf() - a.data.publish_date.valueOf(),
   );
 
 const groupBy = <T extends ListedSummary>(

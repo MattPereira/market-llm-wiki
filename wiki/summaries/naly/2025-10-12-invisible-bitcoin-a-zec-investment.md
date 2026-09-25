@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/naly/2025-10-12-invisible-bitcoin-a-zec-investment.md
 title: "Invisible Bitcoin: A ZEC Investment Thesis"
 url: https://bloomresearch.substack.com/p/invisible-bitcoin-a-zec-investment
-upload_date: 2025-10-12
+publish_date: 2025-10-12
+created_at: 2026-09-25T20:09:49Z
 blurb: "Naly argues Zcash pairs Bitcoin-like scarcity with financial privacy, making rising shielded use and falling issuance a potential repricing catalyst."
 topics: ["crypto", "macro"]
 ---

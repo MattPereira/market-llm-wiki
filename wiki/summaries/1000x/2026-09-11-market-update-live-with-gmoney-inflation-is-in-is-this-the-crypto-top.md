@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/1000x/2026-09-11-market-update-live-with-gmoney-inflation-is-in-is-this-the-crypto-top.md
 title: "MARKET UPDATE: Live With GMoney, Inflation Is In, Is This The Crypto Top?"
 url: https://www.youtube.com/watch?v=f_xGXYvFHwc
-upload_date: 2026-09-11
+publish_date: 2026-09-11
+created_at: 2026-09-13T23:26:58Z
 blurb: "GMoney argues tokenized stocks are reviving on-chain experimentation while AI's strategic importance keeps him bullish despite rate-hike risk."
 topics: ["macro", "crypto", "ai", "equities"]
 ---

@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/insilico-terminal/2026-09-24-finding-the-trades-institutions-wont-touch-degentradinglsd.md
 title: "Finding the Trades Institutions Won't Touch | DegentradingLSD"
 url: https://www.youtube.com/watch?v=8GqZgOK9e78
-upload_date: 2026-09-24
+publish_date: 2026-09-24
+created_at: 2026-09-24T23:05:31Z
 blurb: "DegentradingLSD seeks trades institutions avoid, keeps cash for drawdowns, and favors select AI equities and crypto narratives over broad market bets."
 topics: ["crypto", "equities", "ai"]
 ---

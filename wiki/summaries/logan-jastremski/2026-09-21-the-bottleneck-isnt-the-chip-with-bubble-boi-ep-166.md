@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/logan-jastremski/2026-09-21-the-bottleneck-isnt-the-chip-with-bubble-boi-ep-166.md
 title: "The Bottleneck Isn’t the Chip with Bubble boi | EP 166"
 url: https://www.youtube.com/watch?v=qKHzZ14lOVA
-upload_date: 2026-09-21
+publish_date: 2026-09-21
+created_at: 2026-09-23T22:16:14Z
 blurb: "Bubble boi argues packaging, interconnects, and memory placement govern AI scaling, and favors durable hardware suppliers over competing model labs."
 topics: ["ai", "equities"]
 ---

@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md
 title: "Cloudflare CEO: The Internet Needs Crypto to Survive AI"
 url: https://www.youtube.com/watch?v=TKVY4hVAd9g
-upload_date: 2026-05-25
+publish_date: 2026-05-25
+created_at: 2026-09-22T22:41:43Z
 blurb: "Matthew Prince argues AI answers threaten creator revenue and proposes controlled access and stablecoin payments, while warning that scale and concentration remain unsolved."
 topics: ["ai"]
 ---

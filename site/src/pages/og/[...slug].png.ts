@@ -20,7 +20,7 @@ export const GET: APIRoute<{ summary: CollectionEntry<"summaries"> }> = async ({
     title: summary.data.title,
     byline: ogByline(
       creatorName(creatorSlug(summary.id)),
-      summary.data.upload_date,
+      summary.data.publish_date,
     ),
     blurb: summary.data.blurb,
   });

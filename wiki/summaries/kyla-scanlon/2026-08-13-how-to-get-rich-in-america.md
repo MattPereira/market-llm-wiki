@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/kyla-scanlon/2026-08-13-how-to-get-rich-in-america.md
 title: "How to Get Rich in America"
 url: https://kyla.substack.com/p/how-to-get-rich-in-america
-upload_date: 2026-08-13
+publish_date: 2026-08-13
+created_at: 2026-09-17T02:02:20Z
 blurb: "Scanlon argues an economy rewarding ownership over labor, aging wealth, and opaque institutions pushes Americans toward speculation and young voters toward political exit."
 topics: ["macro", "ai"]
 ---

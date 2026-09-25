@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/taiki-maeda/2026-09-18-zcash-can-zec-hit-20000-this-cycle.md
 title: "Zcash: Can ZEC hit $20,000 This Cycle?"
 url: https://www.youtube.com/watch?v=rF3wA0keKGw
-upload_date: 2026-09-18
+publish_date: 2026-09-18
+created_at: 2026-09-22T00:19:08Z
 blurb: "Maeda anchors five-digit ZEC targets to historical Bitcoin-competitor market cap ratios and sets a first profit-take at 3-4% of Bitcoin's market cap."
 topics: ["crypto"]
 ---

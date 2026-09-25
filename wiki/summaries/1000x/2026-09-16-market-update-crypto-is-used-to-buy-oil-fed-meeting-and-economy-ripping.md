@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/1000x/2026-09-16-market-update-crypto-is-used-to-buy-oil-fed-meeting-and-economy-ripping.md
 title: "MARKET UPDATE: Crypto Is Used To Buy Oil?! FED Meeting, And Economy Ripping"
 url: https://www.youtube.com/watch?v=9pZhmQSroD4
-upload_date: 2026-09-16
+publish_date: 2026-09-16
+created_at: 2026-09-17T18:18:00Z
 blurb: "Avi expects Fed–Treasury conflict to favor monetary assets, while Jonah favors copper and cheaper AI as drivers of a continuing bull market."
 topics: ["macro", "crypto", "ai", "commodities"]
 ---

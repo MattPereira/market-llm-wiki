@@ -67,7 +67,8 @@ agent: codex
 source: ../../raw/<creator>/<date>-<title>.md
 title: "Source title"
 url: https://example.com/source
-upload_date: YYYY-MM-DD
+publish_date: YYYY-MM-DD
+created_at: YYYY-MM-DDTHH:MM:SSZ
 blurb: "One concise sentence saying what this source delivers."
 topics: ["macro", "crypto"]
 ---
@@ -76,8 +77,12 @@ topics: ["macro", "crypto"]
 `blurb` and `topics` are required on every summary — the reading site's content
 schema rejects a summary missing either.
 
+`publish_date` is when the source was published — copy the raw's `upload_date`
+(YouTube) or `post_date` (Substack). `created_at` is when you wrote the summary:
+fill it from `date -u +%Y-%m-%dT%H:%M:%SZ` at save time.
+
 Open the body with the title as an H1 and a byline:
-`**<Creator>** · <upload_date> · <duration> · [watch](<url>)`. For written posts,
+`**<Creator>** · <publish_date> · <duration> · [watch](<url>)`. For written posts,
 drop the duration and use `[read](<url>)`. The Site strips both; they let the file
 read standalone in Obsidian.
 

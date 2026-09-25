@@ -3,7 +3,8 @@ type: summary
 source: ../../raw/1000x/2026-09-10-market-update-hunter-biden-scams-us-intc-rips-commodities-onchain-anthropics-sky.md
 title: "MARKET UPDATE: Hunter Biden Scams Us, $INTC Rips, Commodities Onchain, Anthropic's Skynet Risk"
 url: https://www.youtube.com/watch?v=2xOKiKGafOA
-upload_date: 2026-09-10
+publish_date: 2026-09-10
+created_at: 2026-09-10T22:41:48Z
 blurb: "Avi turns short-term bearish Bitcoin below 70K and rotates into the AI/memory trade, while arguing crypto is where new commodity markets get born."
 topics: ["crypto", "ai", "equities", "commodities"]
 ---

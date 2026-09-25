@@ -3,7 +3,7 @@ import { renderIndex } from "./index-markdown.js";
 
 const summary = (id: string, date: string, title: string, blurb: string) => ({
   id,
-  data: { upload_date: new Date(date), topics: ["ai"], title, blurb },
+  data: { publish_date: new Date(date), topics: ["ai"], title, blurb },
 });
 
 const kyla = summary(

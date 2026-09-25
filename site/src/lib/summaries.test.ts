@@ -3,7 +3,7 @@ import { byCreator, byTopic, creatorSlug, newestFirst } from "./summaries.js";
 
 const summary = (id: string, date: string, topics: string[]) => ({
   id,
-  data: { upload_date: new Date(date), topics },
+  data: { publish_date: new Date(date), topics },
 });
 
 const kyla = summary("kyla-scanlon/2026-09-05-ai-agents", "2026-09-05", ["ai"]);

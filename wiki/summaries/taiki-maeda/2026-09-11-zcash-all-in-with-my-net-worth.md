@@ -4,7 +4,8 @@ agent: codex
 source: ../../raw/taiki-maeda/2026-09-11-zcash-all-in-with-my-net-worth.md
 title: "Zcash: All-in with my Net Worth."
 url: https://www.youtube.com/watch?v=VK6DKuuqPWw
-upload_date: 2026-09-11
+publish_date: 2026-09-11
+created_at: 2026-09-13T19:59:44Z
 blurb: "Maeda argues ZEC's four-digit breakout begins a reflexive repricing as privacy adoption, institutional access, and Bitcoin diversification reinforce one another."
 topics: ["crypto"]
 ---

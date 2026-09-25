@@ -15,7 +15,8 @@ export const summarySchema = z.object({
   title: z.string(),
   source: z.string(),
   url: z.string().url(),
-  upload_date: z.date(),
+  publish_date: z.date(),
+  created_at: z.date(),
   blurb: z.string(),
   topics: z.array(topicSlug).nonempty(),
 });
