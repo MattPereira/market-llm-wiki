@@ -6,7 +6,7 @@ import { summaryCount } from "../lib/format";
 import { creatorSlug } from "../lib/summaries";
 import { topicSlugs } from "../lib/topics";
 
-const RECENT = 3;
+const RECENT = 5;
 const TAGLINE = "Agent-written summaries of market commentary.";
 
 const summaries = await getCollection("summaries");
@@ -57,7 +57,7 @@ const stats = [
         id="recent-heading"
         class="border-edge mb-6 border-b pb-3 font-serif text-2xl font-semibold tracking-tight text-ink-strong"
       >
-        Recent
+        Summaries
       </h2>
       <SummaryList summaries={recent} headingLevel={3} compact />
       <div class="border-edge border-t pt-4 text-right">
