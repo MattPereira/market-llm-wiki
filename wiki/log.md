@@ -93,3 +93,7 @@
 ## [2026-09-24] ingest | Invisible Bitcoin: A ZEC Investment Thesis
   - Added: [summary](summaries/naly/2025-10-12-invisible-bitcoin-a-zec-investment.md)
   - Notes: First Naly entry; mapped Bloom Research's Substack to Naly. Thesis ties ZEC's Bitcoin-like issuance to usable shielded privacy and potential institutional demand. Price, adoption, and offshore-wealth figures are the author's October 2025 claims and scenarios.
+
+## [2026-09-25] ingest | Luke Gromen: This Is How Hyperinflation Begins
+  - Added: [summary](summaries/goldrepublic-global/2026-09-23-luke-gromen-this-is-how-hyperinflation-begins.md)
+  - Notes: First GoldRepublic Global entry; added its creator slug to creators.toml. Gromen expects debt and energy stress to raise long-term yields and erode bonds' real value; he favors gold, Bitcoin, silver, and selectively miners. His gold-for-rare-earths theory is explicitly unconfirmed.

@@ -16,6 +16,10 @@
 
 - [Cloudflare CEO: The Internet Needs Crypto to Survive AI](summaries/bankless/2026-05-25-cloudflare-ceo-the-internet-needs-crypto-to-survive-ai.md) — 2026-05-25 · Bankless — Matthew Prince argues AI answers threaten creator revenue and proposes controlled access and stablecoin payments, while warning that scale and concentration remain unsolved.
 
+## GoldRepublic Global
+
+- [Luke Gromen: This Is How Hyperinflation Begins](summaries/goldrepublic-global/2026-09-23-luke-gromen-this-is-how-hyperinflation-begins.md) — 2026-09-23 · GoldRepublic Global — Gromen expects debt stress and physical shortages to erode bonds' purchasing power, favoring gold, Bitcoin, and selectively miners.
+
 ## Insilico Terminal
 
 - [Finding the Trades Institutions Won't Touch | DegentradingLSD](summaries/insilico-terminal/2026-09-24-finding-the-trades-institutions-wont-touch-degentradinglsd.md) — 2026-09-24 · Insilico Terminal — DegentradingLSD seeks trades institutions avoid, keeps cash for drawdowns, and favors select AI equities and crypto narratives over broad market bets.

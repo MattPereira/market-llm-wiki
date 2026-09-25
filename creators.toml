@@ -74,3 +74,7 @@ channel = "https://www.youtube.com/channel/UCgghHNmUsrM72Bx3hqdI1vQ"
 [naly]
 name = "Naly"
 substack = ["bloomresearch"]
+
+[goldrepublic-global]
+name = "GoldRepublic Global"
+youtube = ["goldrepublic-global"]
