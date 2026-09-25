@@ -77,14 +77,6 @@
   --color-border: var(--edge);
   --color-input: var(--edge);
   --color-ring: var(--ink-muted);
-  --color-sidebar: var(--surface);
-  --color-sidebar-foreground: var(--ink);
-  --color-sidebar-primary: var(--ink-strong);
-  --color-sidebar-primary-foreground: var(--surface);
-  --color-sidebar-accent: var(--surface-raised);
-  --color-sidebar-accent-foreground: var(--ink-strong);
-  --color-sidebar-border: var(--edge);
-  --color-sidebar-ring: var(--ink-muted);
 
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);

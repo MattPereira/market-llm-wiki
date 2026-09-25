@@ -1,3 +1,10 @@
+/** Content sections, in nav order. Search is a utility, so it sits beside the theme toggle instead. */
+export const sections = [
+  { href: "/summaries/", label: "Summaries" },
+  { href: "/creators/", label: "Creators" },
+  { href: "/topics/", label: "Topics" },
+] as const;
+
 /**
  * Which nav item the current URL belongs under, as its href, or undefined for a
  * page that sits in no section. Permalinks mirror the file tree, so a Creator

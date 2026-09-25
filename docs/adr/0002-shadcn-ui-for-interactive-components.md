@@ -4,9 +4,10 @@ Supersedes the "React + shadcn/ui" deferral in
 [0001](0001-astro-static-site-no-runtime-state.md). Everything else in 0001
 stands: the site is still static, with no server and no runtime state.
 
-The first need was site navigation that collapses on mobile, now shadcn's
-Sidebar. It wraps every page (`AppShell` in `Base.astro`), so every page
-hydrates React. Hand-rolling each accessible
+The first need was site navigation that collapses on mobile. It started as
+shadcn's Sidebar wrapping every page, and is now a static top bar
+(`SiteHeader.astro`) whose mobile menu is a shadcn Sheet island
+(`MobileNav`), hydrated only below the `md` breakpoint. Hand-rolling each accessible
 interactive piece (focus trapping, Escape, outside-click, ARIA) is more code to
 own than copying in shadcn's Radix-based components, and the site is small
 enough that a React island on the pages that need one is an acceptable cost.

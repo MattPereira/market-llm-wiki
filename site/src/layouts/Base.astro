@@ -9,8 +9,7 @@ interface Props {
   ogType?: "website" | "article";
 }
 
-import { Icon } from "astro-icon/components";
-import { AppShell } from "@/components/AppShell";
+import SiteHeader from "@/components/SiteHeader.astro";
 import { activeNav } from "../lib/nav";
 import { OG_HEIGHT, OG_WIDTH } from "../lib/og";
 import "../styles/global.css";
@@ -94,29 +93,11 @@ const active = activeNav(Astro.url.pathname);
     <slot name="head" />
   </head>
   <body class="bg-surface text-ink text-lg antialiased">
-    <AppShell client:load active={active}>
-      <button
-        slot="themeToggle"
-        class="text-ink-muted hover:text-ink-strong p-2 text-base"
-        id="theme-toggle"
-        type="button"
-      >
-        <span class="sr-only">Theme:</span>
-        <span data-theme-label="light">
-          <span class="sr-only">Light</span>
-          <Icon name="ri:sun-line" class="size-5" aria-hidden="true" />
-        </span>
-        <span data-theme-label="dark">
-          <span class="sr-only">Dark</span>
-          <Icon name="ri:moon-line" class="size-5" aria-hidden="true" />
-        </span>
-      </button>
-      <div class="mx-auto w-full max-w-4xl px-5 py-10 sm:px-6 sm:py-16">
-        <slot />
-      </div>
-    </AppShell>
+    <SiteHeader active={active} />
+    <main class="mx-auto w-full max-w-4xl px-5 py-10 sm:px-6 sm:py-16">
+      <slot />
+    </main>
     <script is:inline>
-      // Delegated: the toggle sits inside the React island, which can swap the node out on hydration.
       document.addEventListener("click", (event) => {
         if (!event.target.closest("#theme-toggle")) return;
 

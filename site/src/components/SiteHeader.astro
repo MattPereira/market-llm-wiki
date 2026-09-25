@@ -1,0 +1,82 @@
+---
+import { Icon } from "astro-icon/components";
+import { cn } from "cn";
+import { MobileNav } from "@/components/MobileNav";
+import { ReadingProgress } from "@/components/ReadingProgress";
+import { buttonVariants } from "@/components/ui/button";
+import { sections } from "../lib/nav";
+
+interface Props {
+  active?: string;
+}
+
+const { active } = Astro.props;
+
+const iconButton = cn(
+  buttonVariants({ variant: "ghost", size: "icon-lg" }),
+  "text-ink-muted",
+);
+const current = (href: string) => (href === active ? "page" : undefined);
+const activeClass = "bg-accent text-accent-foreground";
+---
+
+<header class="border-edge bg-surface sticky top-0 z-10 border-b">
+  <div class="mx-auto flex h-14 w-full max-w-4xl items-center px-5 sm:px-6">
+    {/* Pulled out by the buttons' own padding so the icons line up with the text column. */}
+    <div class="-ml-2 flex items-center gap-1">
+      <div class="md:hidden">
+        <MobileNav client:media="(max-width: 767px)" active={active} />
+      </div>
+      <a
+        href="/"
+        aria-label="Home"
+        class={cn(iconButton, "text-ink-strong")}
+      >
+        <Icon name="ri:stock-line" class="size-6" aria-hidden="true" />
+      </a>
+      <nav aria-label="Main" class="hidden md:block">
+        <ul class="flex items-center gap-1">
+          {
+            sections.map(({ href, label }) => (
+              <li>
+                <a
+                  href={href}
+                  aria-current={current(href)}
+                  class={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "px-3 text-base font-normal",
+                    href === active && activeClass,
+                  )}
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+    <div class="-mr-2 ml-auto flex items-center gap-1">
+      <a
+        href="/search/"
+        aria-label="Search"
+        aria-current={current("/search/")}
+        class={cn(iconButton, active === "/search/" && activeClass)}
+      >
+        <Icon name="ri:search-line" class="size-5" aria-hidden="true" />
+      </a>
+      <button class={iconButton} id="theme-toggle" type="button">
+        <span class="sr-only">Theme:</span>
+        <span data-theme-label="light">
+          <span class="sr-only">Light</span>
+          <Icon name="ri:sun-line" class="size-5" aria-hidden="true" />
+        </span>
+        <span data-theme-label="dark">
+          <span class="sr-only">Dark</span>
+          <Icon name="ri:moon-line" class="size-5" aria-hidden="true" />
+        </span>
+      </button>
+    </div>
+  </div>
+  <ReadingProgress client:load />
+</header>
