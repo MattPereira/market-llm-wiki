@@ -32,6 +32,10 @@
 
 - [The Bottleneck Isn’t the Chip with Bubble boi | EP 166](summaries/logan-jastremski/2026-09-21-the-bottleneck-isnt-the-chip-with-bubble-boi-ep-166.md) — 2026-09-21 · Logan Jastremski — Bubble boi argues packaging, interconnects, and memory placement govern AI scaling, and favors durable hardware suppliers over competing model labs.
 
+## Naly
+
+- [Invisible Bitcoin: A ZEC Investment Thesis](summaries/naly/2025-10-12-invisible-bitcoin-a-zec-investment.md) — 2025-10-12 · Naly — Naly argues Zcash pairs Bitcoin-like scarcity with financial privacy, making rising shielded use and falling issuance a potential repricing catalyst.
+
 ## Nick Nemeth
 
 - [THE HOLE](summaries/nick-nemeth/2026-04-04-the-hole.md) — 2026-04-04 · Nick Nemeth — Nemeth argues $1.54T of affiliated life-insurance reinsurance is largely phantom, leaving most top insurers insolvent once private-credit downgrades hit.

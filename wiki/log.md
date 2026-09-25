@@ -89,3 +89,7 @@
 ## [2026-09-24] ingest | Finding the Trades Institutions Won't Touch | DegentradingLSD
   - Added: [summary](summaries/insilico-terminal/2026-09-24-finding-the-trades-institutions-wont-touch-degentradinglsd.md)
   - Notes: First Insilico Terminal entry; added the creator and channel to creators.toml. DegentradingLSD favors institutionally neglected trades, cash reserves, memory equities, and tightly held ZEC; his AI demand, ZEC supply, and token-return expectations remain speaker claims.
+
+## [2026-09-24] ingest | Invisible Bitcoin: A ZEC Investment Thesis
+  - Added: [summary](summaries/naly/2025-10-12-invisible-bitcoin-a-zec-investment.md)
+  - Notes: First Naly entry; mapped Bloom Research's Substack to Naly. Thesis ties ZEC's Bitcoin-like issuance to usable shielded privacy and potential institutional demand. Price, adoption, and offshore-wealth figures are the author's October 2025 claims and scenarios.

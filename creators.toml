@@ -70,3 +70,7 @@ channel = "https://www.youtube.com/channel/UC8__jTM6-_GOkRmOBPrTB0A"
 name = "Insilico Terminal"
 youtube = ["insilico-terminal"]
 channel = "https://www.youtube.com/channel/UCgghHNmUsrM72Bx3hqdI1vQ"
+
+[naly]
+name = "Naly"
+substack = ["bloomresearch"]
