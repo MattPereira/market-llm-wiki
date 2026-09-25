@@ -97,3 +97,7 @@
 ## [2026-09-25] ingest | Luke Gromen: This Is How Hyperinflation Begins
   - Added: [summary](summaries/goldrepublic-global/2026-09-23-luke-gromen-this-is-how-hyperinflation-begins.md)
   - Notes: First GoldRepublic Global entry; added its creator slug to creators.toml. Gromen expects debt and energy stress to raise long-term yields and erode bonds' real value; he favors gold, Bitcoin, silver, and selectively miners. His gold-for-rare-earths theory is explicitly unconfirmed.
+
+## [2026-09-25] ingest | Will rising bond yields crash the market? (Or do you just need to close Twitter?)
+  - Added: [summary](summaries/naly/2026-09-25-will-rising-bond-yields-crash-the.md)
+  - Notes: Naly weighs higher-yield equity stress against fiscal-dominance dilution, using Marks, Gromen, and Alden to size a barbell portfolio. She is shifting some NEAR and ZEC profits into cash and gold now, with a further shift planned if Bitcoin makes new highs. Her Gromen account echoes the 09-23 GoldRepublic interview; Alden adds valuation discipline.

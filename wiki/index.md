@@ -38,6 +38,7 @@
 
 ## Naly
 
+- [Will rising bond yields crash the market? (Or do you just need to close Twitter?)](summaries/naly/2026-09-25-will-rising-bond-yields-crash-the.md) — 2026-09-25 · Naly — Naly weighs bond-market stress against currency dilution and shifts some NEAR and ZEC profits into cash and gold to protect a risk-heavy portfolio.
 - [Invisible Bitcoin: A ZEC Investment Thesis](summaries/naly/2025-10-12-invisible-bitcoin-a-zec-investment.md) — 2025-10-12 · Naly — Naly argues Zcash pairs Bitcoin-like scarcity with financial privacy, making rising shielded use and falling issuance a potential repricing catalyst.
 
 ## Nick Nemeth
