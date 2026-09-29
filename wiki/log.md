@@ -101,3 +101,7 @@
 ## [2026-09-25] ingest | Will rising bond yields crash the market? (Or do you just need to close Twitter?)
   - Added: [summary](summaries/naly/2026-09-25-will-rising-bond-yields-crash-the.md)
   - Notes: Naly weighs higher-yield equity stress against fiscal-dominance dilution, using Marks, Gromen, and Alden to size a barbell portfolio. She is shifting some NEAR and ZEC profits into cash and gold now, with a further shift planned if Bitcoin makes new highs. Her Gromen account echoes the 09-23 GoldRepublic interview; Alden adds valuation discipline.
+
+## [2026-09-29] ingest | Crypto Is Rebuilding The Financial System — And Opportunities Abound
+  - Added: [summary](summaries/1000x/2026-09-28-crypto-is-rebuilding-the-financial-system-and-opportunities-abound.md)
+  - Notes: Captions fetched successfully. LayerZero’s cofounder describes interoperability standards, finality risk, Zero and Atlas, institutional testnet activity, and ZRO fee capture. Summary is 1,314 words from a 12,183-word Raw; index regenerated. Performance, adoption, and partner figures remain guest claims. Preserved his fall 2026 launch window rather than the host’s closing September remark; buy-and-burn share applies after frontend fees.
