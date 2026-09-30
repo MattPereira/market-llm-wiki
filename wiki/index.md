@@ -27,6 +27,8 @@
 
 ## Kyla Scanlon
 
+- [AI Debt and the Energy Crisis](summaries/kyla-scanlon/2026-09-27-ai-debt-and-the-energy-crisis.md) — 2026-09-27 · Kyla Scanlon — Scanlon argues war-driven energy inflation and AI borrowing raise financing costs, widening economic divides and squeezing AI infrastructure debt.
+- [Bonds, a Beacon of Truth in Our Dark World](summaries/kyla-scanlon/2026-09-24-bonds-a-beacon-of-truth-in-our-dark-world.md) — 2026-09-24 · Kyla Scanlon — Scanlon argues rising bond yields reveal political and structural risks that AI-driven stock gains obscure.
 - [Fed day!](summaries/kyla-scanlon/2026-09-17-fed-day.md) — 2026-09-17 · Kyla Scanlon — Scanlon explains the Fed's first hike since 2023 as an inflation and credibility move it cannot use to fix an oil shock.
 - [Oil, Treasuries, and AI](summaries/kyla-scanlon/2026-09-15-oil-treasuries-and-ai.md) — 2026-09-15 · Kyla Scanlon — Scanlon links an oil shock and AI's borrowing binge to inflation, rising Treasury yields, and the loss of cheap money AI requires.
 - [What even is $5,000](summaries/kyla-scanlon/2026-09-11-what-even-is-5000.md) — 2026-09-11 · Kyla Scanlon — Scanlon argues Trump's proposed $5,000 tariff dividend lacks tariff revenue and would instead deepen federal debt, interest costs, and inflation pressure.

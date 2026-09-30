@@ -105,3 +105,11 @@
 ## [2026-09-29] ingest | Crypto Is Rebuilding The Financial System — And Opportunities Abound
   - Added: [summary](summaries/1000x/2026-09-28-crypto-is-rebuilding-the-financial-system-and-opportunities-abound.md)
   - Notes: Captions fetched successfully. LayerZero’s cofounder describes interoperability standards, finality risk, Zero and Atlas, institutional testnet activity, and ZRO fee capture. Summary is 1,314 words from a 12,183-word Raw; index regenerated. Performance, adoption, and partner figures remain guest claims. Preserved his fall 2026 launch window rather than the host’s closing September remark; buy-and-burn share applies after frontend fees.
+
+## [2026-09-29] ingest | Bonds, a Beacon of Truth in Our Dark World
+  - Added: [summary](summaries/kyla-scanlon/2026-09-24-bonds-a-beacon-of-truth-in-our-dark-world.md)
+  - Notes: Captions fetched successfully; 171-word summary from 618-word Raw. Captures Scanlon's contrast between bond-market concern and AI-driven equity optimism, global yield pressure, and gold diversification. Gold movement and market figures remain speaker claims; corrected "terrorists" to "tariffs" in summary from context. Index regenerated.
+
+## [2026-09-29] ingest | AI Debt and the Energy Crisis
+  - Added: [summary](summaries/kyla-scanlon/2026-09-27-ai-debt-and-the-energy-crisis.md)
+  - Notes: Captions fetched successfully; 164-word summary from 545-word Raw. Captures Scanlon's energy-inflation, Treasury-yield, and AI-borrowing feedback loop, distributional effects, and Oracle debt concerns. Market figures and Oracle project and credit claims remain attributed to Scanlon. Redirected uv caches and tool directories to /tmp after read-only filesystem errors. Index regenerated.
