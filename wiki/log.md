@@ -113,3 +113,7 @@
 ## [2026-09-29] ingest | AI Debt and the Energy Crisis
   - Added: [summary](summaries/kyla-scanlon/2026-09-27-ai-debt-and-the-energy-crisis.md)
   - Notes: Captions fetched successfully; 164-word summary from 545-word Raw. Captures Scanlon's energy-inflation, Treasury-yield, and AI-borrowing feedback loop, distributional effects, and Oracle debt concerns. Market figures and Oracle project and credit claims remain attributed to Scanlon. Redirected uv caches and tool directories to /tmp after read-only filesystem errors. Index regenerated.
+
+## [2026-10-01] ingest | MARKET UPDATE: Alts Ripping, Economy Crushing, Scammers Scamming — What’s Next?
+  - Added: [summary](summaries/1000x/2026-09-30-market-update-alts-ripping-economy-crushing-scammers-scamming-whats-next.md)
+  - Notes: Captions fetched successfully. Captures memecoin trust, the Hormuz escalation dispute, durable megatrends and institutional constraints, technology-led deflation, AI's human complement, and concentrated equity exposure. GP allegations, military assessments, and investment targets remain attributed to the hosts. Summary is 1,290 words from an 11,205-word Raw; index regenerated and frontmatter validated.
