@@ -117,3 +117,15 @@
 ## [2026-10-01] ingest | MARKET UPDATE: Alts Ripping, Economy Crushing, Scammers Scamming — What’s Next?
   - Added: [summary](summaries/1000x/2026-09-30-market-update-alts-ripping-economy-crushing-scammers-scamming-whats-next.md)
   - Notes: Captions fetched successfully. Captures memecoin trust, the Hormuz escalation dispute, durable megatrends and institutional constraints, technology-led deflation, AI's human complement, and concentrated equity exposure. GP allegations, military assessments, and investment targets remain attributed to the hosts. Summary is 1,290 words from an 11,205-word Raw; index regenerated and frontmatter validated.
+
+## [2026-10-03] ingest | Crypto Trading Expert: Why No Amount of Crypto Is Enough (even millions) | Jordi Alexander | E188
+  - Added: [summary](summaries/when-shift-happens/2026-10-01-crypto-trading-expert-why-no-amount-of-crypto-is-enough-even-millions-jordi-alex.md)
+  - Notes: Captions fetched successfully after redirecting uv caches and tool directories to /tmp. First When Shift Happens entry; added creator mapping without new-upload tracking. Alexander emphasizes ongoing adaptation, judgment alongside AI, capital allocation, and conditional Bitcoin/Zcash upside; valuation figures, price scenarios, and health claims remain attributed to him. Summary is 1,360 words from a 19,034-word Raw; index regenerated and frontmatter, source link, publication date, creator, and length validated.
+
+## [2026-10-11] ingest | Steady Lads Live From TOKEN2049 in Singapore (2026)
+  - Added: [summary](summaries/steady-lads/2026-10-09-steady-lads-live-from-token2049-in-singapore-2026.md)
+  - Notes: Captions fetched successfully after redirecting uv caches and tool directories to /tmp. Summary is 1,297 words from a 7,743-word Raw; covers Zcash positioning and exits, crowded exchange-token valuations, token/equity incentives, Pearl issuance, speculative product convergence, and options. Price targets, issuance and volume figures, quantum claims, competitor allegations, and Tom Lee strategy rumors remain attributed to speakers. Index regenerated; topics: crypto, ai, equities.
+
+## [2026-10-14] ingest | The Shrugflation Triangle: How AI, Oil, and Treasuries are Impacting the Economy
+  - Added: [summary](summaries/kyla-scanlon/2026-10-14-the-shrugflation-triangle-how-ai.md)
+  - Notes: Full public Substack post fetched; 1,173-word summary from an 11,219-word Raw. Covers the oil–AI–Treasury feedback loop, distribution of gains, repayment and credit risks, power constraints, equity concentration, governance, and human welfare. Preserves the dispute over financial crowding out; market, company, and research figures remain attributed to Scanlon and her cited sources. Index regenerated; length, blurb, source link, date, and index entry validated. Topics: macro, ai, commodities, equities.

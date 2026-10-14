@@ -78,3 +78,7 @@ substack = ["bloomresearch"]
 [goldrepublic-global]
 name = "GoldRepublic Global"
 youtube = ["goldrepublic-global"]
+
+[when-shift-happens]
+name = "When Shift Happens"
+youtube = ["when-shift-happens"]

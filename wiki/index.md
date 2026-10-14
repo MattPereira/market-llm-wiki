@@ -28,6 +28,7 @@
 
 ## Kyla Scanlon
 
+- [The Shrugflation Triangle: How AI, Oil, and Treasuries are Impacting the Economy](summaries/kyla-scanlon/2026-10-14-the-shrugflation-triangle-how-ai.md) — 2026-10-14 · Kyla Scanlon — Scanlon argues oil shocks, AI spending, and government borrowing reinforce inflation and higher yields while concentrating gains and shifting costs onto households.
 - [AI Debt and the Energy Crisis](summaries/kyla-scanlon/2026-09-27-ai-debt-and-the-energy-crisis.md) — 2026-09-27 · Kyla Scanlon — Scanlon argues war-driven energy inflation and AI borrowing raise financing costs, widening economic divides and squeezing AI infrastructure debt.
 - [Bonds, a Beacon of Truth in Our Dark World](summaries/kyla-scanlon/2026-09-24-bonds-a-beacon-of-truth-in-our-dark-world.md) — 2026-09-24 · Kyla Scanlon — Scanlon argues rising bond yields reveal political and structural risks that AI-driven stock gains obscure.
 - [Fed day!](summaries/kyla-scanlon/2026-09-17-fed-day.md) — 2026-09-17 · Kyla Scanlon — Scanlon explains the Fed's first hike since 2023 as an inflation and credibility move it cannot use to fix an oil shock.
@@ -51,6 +52,7 @@
 
 ## Steady Lads
 
+- [Steady Lads Live From TOKEN2049 in Singapore (2026)](summaries/steady-lads/2026-10-09-steady-lads-live-from-token2049-in-singapore-2026.md) — 2026-10-09 · Steady Lads — The panel favors selective crypto exposure, debates crowded Zcash and exchange-token trades, and explores AI monetary assets and token-versus-equity incentives.
 - [Taiki: The Trading Chad](summaries/steady-lads/2026-09-11-taiki-the-trading-chad.md) — 2026-09-11 · Steady Lads — Taiki stays max-long ZEC while the panel favors BTC, Lighter, BNB, and selective AI tokens over broad altcoin exposure.
 
 ## Taiki Maeda
@@ -58,3 +60,7 @@
 - [Zcash: Can ZEC hit $20,000 This Cycle?](summaries/taiki-maeda/2026-09-18-zcash-can-zec-hit-20000-this-cycle.md) — 2026-09-18 · Taiki Maeda — Maeda anchors five-digit ZEC targets to historical Bitcoin-competitor market cap ratios and sets a first profit-take at 3-4% of Bitcoin's market cap.
 - [Zcash: All-in with my Net Worth.](summaries/taiki-maeda/2026-09-11-zcash-all-in-with-my-net-worth.md) — 2026-09-11 · Taiki Maeda — Maeda argues ZEC's four-digit breakout begins a reflexive repricing as privacy adoption, institutional access, and Bitcoin diversification reinforce one another.
 - [Crypto is Bottoming. Why HYPE and ZEC will go PARABOLIC](summaries/taiki-maeda/2026-07-15-crypto-is-bottoming-why-hype-and-zec-will-go-parabolic.md) — 2026-07-15 · Taiki Maeda — Maeda favors gradual bottoming-process accumulation: HYPE/LIT for RWA perps, ZEC for privacy, quantum resistance, and Bitcoin's Saylor overhang.
+
+## When Shift Happens
+
+- [Crypto Trading Expert: Why No Amount of Crypto Is Enough (even millions) | Jordi Alexander | E188](summaries/when-shift-happens/2026-10-01-crypto-trading-expert-why-no-amount-of-crypto-is-enough-even-millions-jordi-alex.md) — 2026-10-01 · When Shift Happens — Jordi Alexander favors continuous adaptation over retirement targets, human judgment alongside AI, and selective Bitcoin and Zcash exposure over indiscriminate speculation.
